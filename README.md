@@ -5,14 +5,14 @@ Repo pour le rendu de l'exercice du cours VisualDon.
 Les données sont récoltées sur le site https://twitchtracker.com/. Elles proviennent de l'API fournie par https://www.twitch.tv/. 
 ## Description
 Les données fournies par l'API de Twitch sont au format JSON. Pour chaque Streameur de la plateforme, il est possible de récuperer : 
-rank	
-minutes_streamed 
-avg_viewers	
-max_viewers	
-hours_watched	
-followers	
-views	
-followers_total	
-views_total	
+- le rang 
+- les minutes de stream
+- la moyenne de viewers
+- le maximum de viewers 
+- le nombre de minutes vu
+- le nombre de followers
+- le nombre de vues (30 derniers jours) 
+- le nombre total de followers
+- le nombre total de vues
 ## But 
 ## Références 
