@@ -1,24 +1,23 @@
-# VisualDonProject_Twitch
+# VisualDonProject_Hollywood_Movies
 Repo pour le rendu de l'exercice du cours VisualDon. 
 
 ## Contexte 
-Les données sont récoltées sur le site [TwitchTracker](https://twitchtracker.com/). Elles proviennent de l'API fournie par [Twitch](https://www.twitch.tv/). 
+Les données sont récoltées sur le site [kaggle](https://www.kaggle.com/sanjeetsinghnaik/top-1000-highest-grossing-movies). Les données contenues dans ce dataset proviennent de plusieurs sites web. Notamment, [rottentomatoes](https://www.rottentomatoes.com/) et [IMDB](https://www.imdb.com/). 
 ## Description
-Les données fournies par l'API de Twitch sont au format JSON. Les données sont au format numérique, et sont attribuées à un streameur (créateur de contenu sur Twitch). Pour chaque Streameur de la plateforme, il est possible de récuperer : 
-- le rang 
-- les minutes de stream
-- la moyenne de viewers
-- le maximum de viewers 
-- le nombre de minutes vu
-- le nombre de followers
-- le nombre de vues (30 derniers jours) 
-- le nombre total de followers
-- le nombre total de vues
+Les données fournies par ce dataset sont au format JSON. Elles sont composées de données au format texte et numérique, dont :  
+- un id 
+- un nom de film 
+- un résumé 
+- un studio de production 
+- une année de sortie
+- les ventes dans le pays d'origine
+- les ventes à l'international 
+- les ventes totales
+- le genre du film 
+- la durée
 ## But 
-L'objectif de ce projet est d'explorer les données du top 20 des streamers francophones actifs sur la plateforme Twitch. En permettant à cette plateforme de se mettre à jour automatiquement grâce à l'usage d'une API, les visiteurs pourraient s'en servir pour observer l'évolution des streamers sélectionnés.
+L'objectif de ce projet est de pouvoir visualiser l'évolution des revenus de films produits à Hollywood. Nous allons sélectionner les 500 films qui ont rapporté la plus d'argent. Nous allons prendre l'année de production comme métrique pour l'évolution des données. L'histoire racontée sera donc : les 500 films avec le plus gros revenu dans le temps. À cela, s'ajouteront divers information complémentaires. 
 ## Références 
-Il est difficile de lister l'intégralité des usages des données utilisées dans ce projet. Twitch étant une plateforme extrèmement populaire, de nombreux sites recensent les informations concernant les acteurs de Twitch. 
-Voici quelques exemples d'utilisation des données Twitch (Données correspondant aux streamers Twitch en général mais pas nécessairement focalisées sur ceux sélectionnés dans le cadre de ce projet.): 
-- [TwitchTracker](https://twitchtracker.com/)
-- [SullyGnome](https://sullygnome.com/)
-- [StreamCharts](https://streamscharts.com/overview)
+Ces données ont été exploitées sur divers sites web. Dans les exemples ci-dessous, elles sont presentées de manière statique. Il est possible de savoir quel film à rapporté le plus d'argent au Box-office, mais l'année de sortie n'est pas prises en compte. Le but est purement informatif. 
+- [Statista](https://www.statista.com/statistics/262926/box-office-revenue-of-the-most-successful-movies-of-all-time/)
+- [Wikipédia](https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3%A8s_du_box-office_mondial)
