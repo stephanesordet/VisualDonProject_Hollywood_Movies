@@ -4,16 +4,16 @@ Repo pour le rendu de l'exercice du cours VisualDon.
 ## Contexte 
 Les données sont récoltées sur un [dataset kaggle](https://www.kaggle.com/sanjeetsinghnaik/top-1000-highest-grossing-movies). Les données contenues dans ce dataset proviennent de plusieurs sites web. Notamment, [rottentomatoes](https://www.rottentomatoes.com/) et [IMDB](https://www.imdb.com/). 
 ## Description
-Les données fournies par ce dataset sont au format JSON. Elles sont composées de données au format texte et numérique, dont :  
+Les données fournies par ce dataset sont au format CSV. Elles sont composées de données au format texte et numérique, dont :  
 - un id 
 - un nom de film 
 - un résumé 
 - un studio de production 
 - une année de sortie
 - les ventes dans le pays d'origine
-- les ventes à l'international 
+- les ventes à l'international
 - les ventes totales
-- le genre du film 
+- le genre du film
 - la durée
 ## But 
 L'objectif de ce projet est de pouvoir visualiser l'évolution des revenus de films produits à Hollywood. Nous allons sélectionner les 500 films qui ont rapporté la plus d'argent. Nous allons prendre l'année de production comme métrique pour l'évolution des données. L'histoire racontée sera donc : les 500 films avec le plus gros revenu dans le temps. À cela, s'ajouteront divers information complémentaires. 
