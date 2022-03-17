@@ -2,7 +2,7 @@
 Repo pour le rendu de l'exercice du cours VisualDon. 
 
 ## Contexte 
-Les données sont récoltées sur le site [kaggle](https://www.kaggle.com/sanjeetsinghnaik/top-1000-highest-grossing-movies). Les données contenues dans ce dataset proviennent de plusieurs sites web. Notamment, [rottentomatoes](https://www.rottentomatoes.com/) et [IMDB](https://www.imdb.com/). 
+Les données sont récoltées sur un [dataset kaggle](https://www.kaggle.com/sanjeetsinghnaik/top-1000-highest-grossing-movies). Les données contenues dans ce dataset proviennent de plusieurs sites web. Notamment, [rottentomatoes](https://www.rottentomatoes.com/) et [IMDB](https://www.imdb.com/). 
 ## Description
 Les données fournies par ce dataset sont au format JSON. Elles sont composées de données au format texte et numérique, dont :  
 - un id 
