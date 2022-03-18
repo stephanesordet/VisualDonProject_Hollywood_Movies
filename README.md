@@ -16,7 +16,7 @@ Les données fournies par ce dataset sont au format CSV. Elles sont composées d
 - le genre du film
 - la durée
 ## But 
-L'objectif de ce projet est de pouvoir visualiser l'évolution des revenus de films produits à Hollywood. Nous allons sélectionner les 500 films qui ont rapporté la plus d'argent. Nous allons prendre l'année de production comme métrique pour l'évolution des données. L'histoire racontée sera donc : les 500 films avec le plus gros revenu dans le temps. À cela, s'ajouteront divers information complémentaires. 
+L'objectif de ce projet est de pouvoir visualiser l'évolution des revenus de films produits à Hollywood. Nous allons sélectionner les 915 films qui ont rapporté la plus d'argent. Nous allons prendre l'année de production comme métrique pour l'évolution des données. L'histoire racontée sera donc : les 915 films avec le plus gros revenu dans le temps. À cela, s'ajouteront divers information complémentaires. 
 ## Références 
 Ces données ont été exploitées sur divers sites web. Dans les exemples ci-dessous, elles sont presentées de manière statique. Il est possible de savoir quel film à rapporté le plus d'argent au Box-office, mais l'année de sortie n'est pas prises en compte. Le but est purement informatif. 
 - [Statista](https://www.statista.com/statistics/262926/box-office-revenue-of-the-most-successful-movies-of-all-time/)
