@@ -21,3 +21,5 @@ L'objectif de ce projet est de pouvoir visualiser l'évolution des revenus de fi
 Ces données ont été exploitées sur divers sites web. Dans les exemples ci-dessous, elles sont presentées de manière statique. Il est possible de savoir quel film à rapporté le plus d'argent au Box-office, mais l'année de sortie n'est pas prises en compte. Le but est purement informatif. 
 - [Statista](https://www.statista.com/statistics/262926/box-office-revenue-of-the-most-successful-movies-of-all-time/)
 - [Wikipédia](https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3%A8s_du_box-office_mondial)
+## Wireframe 
+Le wireframe de notre projet est disponible sur [Figma](https://www.figma.com/file/R0rvrCyjQwNPUYi2ByNpxs/Hollywood?node-id=0%3A1).
