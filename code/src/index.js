@@ -101,4 +101,16 @@ async function renderMovie(movieTitle, moviePoster) {
     newMovie.querySelector('p').textContent = movieTitle;
     movieList.append(newMovie)
   }
+import * as Movies from './loadMovies';
+ 
+const TitlesArray = []
+const IntroductionArray = []
+const StudiosArray = []
+const ReleaseArray = []
+const DomSalesArray = []
+const IntSalesArray = []
+const WorldSalesArray = []
+const GenreArray = []
+const RuntimeArray = []
 
+console.log(Movies.getDomSales())
