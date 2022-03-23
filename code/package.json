@@ -10,7 +10,9 @@
   "author": "Noemi Romano",
   "license": "ISC",
   "dependencies": {
-    "d3": "^7.3.0"
+    "@babel/polyfill": "^7.12.1",
+    "d3": "^7.3.0",
+    "fs": "0.0.1-security"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
