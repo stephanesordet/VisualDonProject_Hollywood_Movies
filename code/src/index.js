@@ -52,13 +52,16 @@ const y = d3.scalePow()
 svgGraph.append('g')
   .call(d3.axisRight(y).ticks(20));
 
-svgGraph.selectAll("circle")
+svgGraph.append('g')
+  .attr("transform", "translate(5,0)")
+  .attr('class', 'all-movies')
+  .selectAll("circle")
   .data(file)
   .enter()
   .append("circle")
   .attr('cx', f => x(parseInt(f.Title.substring(f.Title.length - 5, f.Title.length-1))))
   .attr('cy', f => y((f['World Sales (in $)'])))
-  .attr('r', 5)
+  .attr('r', 7)
   .attr('fill',f => {
     let themes = f.Genre.substring(
       f.Genre.indexOf('[') + 1,
@@ -71,46 +74,46 @@ svgGraph.selectAll("circle")
     )
     switch (genre) {
       case 'Action':
-        return 'indianred';
+        return '#B3494C';
         break;
       case 'Adventure':
-        return 'blue';
+        return '#206632';
         break;
       case 'Animation':
-        return 'green';
+        return '#C7541A';
         break;
       case 'Comedy':
-        return 'yellow';
+        return '#1B8287';
         break;
       case 'Crime':
-        return 'orange';
+        return '#1F5F5B';
         break;
       case 'Documentary':
-        return 'purple';
+        return '#159947';
         break;
       case 'Drama':
-        return 'pink';
+        return '#703D00';
         break;
       case 'Family':
-        return 'brown';
+        return '#991C15';
         break;
       case 'Fantasy':
-        return 'black';
+        return '#49B265';
         break;
       case 'History':
-        return 'white';
+        return '#49ABA4';
         break;
       case 'Horror':
-        return 'grey';
+        return '#06373A';
         break;
       case 'Music':
-        return 'gold';
+        return '#1B8287';
         break;
       case 'Mystery':
-        return 'silver';
+        return '#A43600';
         break;
       case 'Romance':
-        return 'violet';
+        return '#0A5070';
         break;
     }
   })
