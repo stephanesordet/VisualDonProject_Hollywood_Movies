@@ -3,7 +3,6 @@ import {
 } from 'd3'
 import * as d3 from 'd3';
 
-
 const TitlesArray = []
 const IntroductionArray = []
 const StudiosArray = []
@@ -17,6 +16,21 @@ const RuntimeArray = []
 function getMovies() {
   const Movies = require('../assets/movies.json')
   return Movies
+}
+
+async function renderMovies(movies) {
+  for (const movie of movies) {
+    const movieTitle = movie.Title.slice(0, movie.Title.length - 7)
+    const moviePoster = await loadJson(API_QUERY + movieTitle.replaceAll(' ', '+'))
+    renderMovie(movieTitle, moviePoster)
+  }
+}
+
+async function renderMovie(movieTitle, moviePoster) {
+  const newMovie = movieListItemTemplate.content.cloneNode(true)
+  newMovie.querySelector('img').setAttribute('src', POSTER_BASE_URL + moviePoster)
+  newMovie.querySelector('p').textContent = movieTitle;
+  movieList.append(newMovie)
 }
 
 // export function moviesToCircles(movies) {
