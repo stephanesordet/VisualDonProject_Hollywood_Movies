@@ -1,8 +1,9 @@
 import * as d3 from 'd3';
 import file from '../assets/movies.json'
+import {renderMovieDetails} from './loadMovies.js'
 
 export function getGraph(){
-const svgGraph = d3.select('#my_dataviz').append('svg').attr('class', 'graph')
+const svgGraph = d3.select('.graph').append('svg').attr('class', 'graph')
 
 let div = d3.select("#my_dataviz")
   .append("div")
@@ -95,14 +96,16 @@ svgGraph.append('g')
       case 'Fantasy':
         return '#49B265';
         break;
+        case 'Biography':
       case 'History':
         return '#49ABA4';
         break;
       case 'Horror':
         return '#06373A';
         break;
-      case 'Music':
-        return '#1B8287';
+        case 'Music':
+      case 'Musical':
+        return '#066EC7';
         break;
       case 'Mystery':
         return '#A43600';
@@ -110,6 +113,22 @@ svgGraph.append('g')
       case 'Romance':
         return '#0A5070';
         break;
+      case 'Sci-Fi':
+        return '#061A23';
+        break;
+        case 'Sport':
+            return '#C71810';
+            break;
+        case 'Thriller':
+        return '#5282AB';
+        break;
+        case 'War':
+        return '#1F5232';
+        break;
+        case 'Western':
+        return '#85407A';
+        break;
+
     }
   })
   .on("mouseover", function(event,d) {
@@ -125,6 +144,8 @@ svgGraph.append('g')
       .duration(500)
       .style("opacity", 0);
     })
-  .on("click", showDetails(event, d));
+  .on("click", function(event,d){
+    renderMovieDetails(event, d);
+  });
 
 }

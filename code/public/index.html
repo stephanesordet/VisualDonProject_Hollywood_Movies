@@ -5,33 +5,32 @@
     <meta charset="UTF-8">
     <title>Hollywood Movies</title>
     <script src="../src/index.js" async></script>
-    <style>
-
-        div.tooltip {
-          position: absolute;
-          text-align: center;
-          width: auto;
-          height: auto;
-          padding: 2px;
-          font: 12px sans-serif;
-          font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-          background: lightsteelblue;
-          border: 0px;
-          border-radius: 8px;
-          pointer-events: none;
-        }
-        
-        </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<div class="movieList">
-    <div class="list">
-
-    </div>
+<div class="graph">
+    <h1>Movies with the highest Box Office between 1977 and 2021</h1>
 </div>
-<template id="movieList">
-    <img class="poster" width="500" src=" ">
-    <p class="title"></p>
+<div id="movieDetails" class="hidden">
+    
+</div>
+<template id="movieDetailTemplate">
+    <img class="poster" height="300" src="">
+    <h2 class="title"></h2>
+    <h3>Description</h3>
+    <p class="description"></p>
+    <h3>Genre(s)</h3>
+    <div class="genre"></div>
+    <div class="block">
+        <div><h3>Studio</h3>
+            <p class="studio"></p></div>
+        <div><h3>Runtime</h3>
+            <p class="runtime"></p></div></div>
+    <div class="block">
+        <div class="world"><h3>World Sales (USD)</h3>
+            <p class="WorldSales"></p></div>
+        <div class="domestic"><h3>Domestic Sales (USD)</h3>
+        <p class="DomesticSales"></p></div></div>
 </template>
 </body>
 

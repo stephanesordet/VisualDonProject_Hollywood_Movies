@@ -2,6 +2,8 @@ import {
   tickFormat
 } from 'd3'
 import * as d3 from 'd3';
+let numeral = require('numeral'); // LANCER 'npm install numeral' POUR QUE ÇA MARCHE
+
 
 const TitlesArray = []
 const IntroductionArray = []
@@ -12,6 +14,18 @@ const IntSalesArray = []
 const WorldSalesArray = []
 const GenreArray = []
 const RuntimeArray = []
+const API_KEY = '24cd33d154dc43bf62799d9af836baa3'
+const API_QUERY = "https://api.themoviedb.org/3/search/movie?api_key=" + API_KEY + "&query="
+const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/original';
+const TEMPLATE_MOVIE_DETAIL = document.getElementById('movieDetailTemplate')
+const movieDetail = document.getElementById('movieDetails')
+
+async function loadJson(url) {
+  const response = await fetch(url)
+  const parsedJson = await response.json()
+  const posterURL = parsedJson.results[0].poster_path;
+  return posterURL;
+}
 
 function getMovies() {
   const Movies = require('../assets/movies.json')
@@ -26,89 +40,36 @@ async function renderMovies(movies) {
   }
 }
 
-async function renderMovie(movieTitle, moviePoster) {
+export async function renderMovieDetails(event, movie){
+  const newMovieDetail = TEMPLATE_MOVIE_DETAIL.content.cloneNode(true)
+  const titleWithoutYear = movie.Title.endsWith(')')? movie.Title.slice(0, movie.Title.length - 7) : movie.Title
+  const posterURL = await loadJson(API_QUERY + titleWithoutYear.replaceAll(' ', '+'));
+  const movieGenresArray = movie.Genre.substring(
+    movie.Genre.indexOf('[') + 1,
+    movie.Genre.lastIndexOf(']')).replaceAll("'", "").replaceAll(" ", "").split(",");
+    movieGenresArray.forEach(genre => {
+      const p = document.createElement('p')
+      p.classList.add(genre)
+      p.textContent = genre;
+      newMovieDetail.querySelector('.genre').appendChild(p);
+    });
+  newMovieDetail.querySelector('img').setAttribute('src', POSTER_BASE_URL + posterURL);
+  newMovieDetail.querySelector('h2').textContent = movie.Title;
+  newMovieDetail.querySelector('.description').textContent = movie['Movie Info'];
+  newMovieDetail.querySelector('.studio').textContent = movie.Distributor;
+  newMovieDetail.querySelector('.runtime').textContent = movie['Movie Runtime'];
+  newMovieDetail.querySelector('.WorldSales').textContent = numeral(movie['World Sales (in $)']).format("$0,0");
+  newMovieDetail.querySelector('.DomesticSales').textContent = numeral(movie['Domestic Sales (in $)']).format("$0,0");
+  movieDetail.replaceChildren(newMovieDetail);
+  movieDetail.classList.remove('hidden');
+}
+
+function renderMovie(movieTitle, moviePoster) {
   const newMovie = movieListItemTemplate.content.cloneNode(true)
   newMovie.querySelector('img').setAttribute('src', POSTER_BASE_URL + moviePoster)
   newMovie.querySelector('p').textContent = movieTitle;
   movieList.append(newMovie)
 }
-
-// export function moviesToCircles(movies) {
-//   //use d3 and create 1 circle per movie colored by genre where y is Worldwide and x is Release Date
-//   d3.select('svg')
-//     .data(movies)
-//     .enter()
-//     .append('circle')
-//     .attr('cx', function (d) {
-//       return x(d.Release / 10)
-//     })
-//     .attr('cy', function (d) {
-//       return y(d.Worldwide / 100000000)
-//     })
-//     .attr('r', function (d) {
-//       return 20;
-//     })
-//     .attr('fill', function (d) {
-      // switch (d.Genre[0]) {
-      //   case 'Action':
-      //     return 'indianred';
-      //     break;
-      //   case 'Adventure':
-      //     return 'blue';
-      //     break;
-      //   case 'Animation':
-      //     return 'green';
-      //     break;
-      //   case 'Comedy':
-      //     return 'yellow';
-      //     break;
-      //   case 'Crime':
-      //     return 'orange';
-      //     break;
-      //   case 'Documentary':
-      //     return 'purple';
-      //     break;
-      //   case 'Drama':
-      //     return 'pink';
-      //     break;
-      //   case 'Family':
-      //     return 'brown';
-      //     break;
-      //   case 'Fantasy':
-      //     return 'black';
-      //     break;
-      //   case 'History':
-      //     return 'white';
-      //     break;
-      //   case 'Horror':
-      //     return 'grey';
-      //     break;
-      //   case 'Music':
-      //     return 'gold';
-      //     break;
-      //   case 'Mystery':
-      //     return 'silver';
-      //     break;
-      //   case 'Romance':
-      //     return 'indigo';
-      //     break;
-      //   case 'Sci-Fi':
-      //     return 'navy';
-      //     break;
-      //   case 'Thriller':
-      //     return 'maroon';
-      //     break;
-      //   case 'War':
-      //     return 'olive';
-      //     break;
-      //   case 'Western':
-      //     return 'lime';
-      //     break;
-      //   default:
-      //     return 'black';
-      // }
-//     })
-// }
 
 export function getTitles() {
   const Movies = getMovies()

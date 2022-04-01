@@ -1,0 +1,121 @@
+p, h1, h2, h3, h4 {
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 2px;
+    font: 12px sans-serif;
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+
+/* make body a flexbox */
+body {
+  display: flex;
+}
+/*make div.graph a flex item that fits 70% of parent*/
+div.graph {
+    width: 70%;
+}
+/*make div.movieDetails a flex item that takes up the rest of the parent*/
+div.movieDetails {
+  width: 30%;
+}
+.movieDetails img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+div.genre {
+    display: flex;
+    align-items: center;
+}
+
+div.genre p {
+    width: 30%;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+}
+
+p.Action {
+    background-color: #B3494C;
+}
+p.Adventure {
+    background-color: #206632;
+}
+p.Animation {
+    background-color: #C7541A;
+}
+p.Comedy {
+    background-color: #1B8287;
+}
+p.Crime {
+    background-color: #1F5F5B;
+}
+p.Documentary {
+    background-color: #159947;
+}
+p.Drama {
+    background-color: #703D00;
+}
+p.Family {
+    background-color: #991C15;
+}
+p.Fantasy {
+    background-color: #49B265;
+}
+p.History, p.Biography{
+    background-color: #49ABA4;
+}
+p.Horror {
+    background-color: #06373A;
+}
+p.Musical, p.Music {
+    background-color: #066EC7;
+}
+p.Mystery {
+    background-color: #A43600;
+}
+p.Romance {
+    background-color: #0A5070;
+}
+p.Sci-Fi {
+    background-color: #061A23;
+}
+p.Sport {
+    background-color: #C71810;
+}
+p.Thriller {
+    background-color: #5282AB;
+}
+p.War {
+    background-color: #1F5232;
+}
+p.Western {
+    background-color: #85407A;
+}
+
+div.block{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+div.block>*{
+    margin: 20px;
+}
