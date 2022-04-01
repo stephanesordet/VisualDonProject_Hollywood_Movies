@@ -1,6 +1,10 @@
 import * as d3 from 'd3';
+import {
+  pointers
+} from 'd3-selection';
 import file from '../assets/movies.json'
-import * as Movies from './loadMovies';
+// import * as Movies from './loadMovies';
+
 import {
   moviesToCircles
 } from './loadMovies';
@@ -10,14 +14,47 @@ const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/original';
 let postersURL = [];
 const movieList = document.querySelector('.list')
 const movieListItemTemplate = document.getElementById('movieList').cloneNode(true);
+d3.select('body').append('div').attr('id', 'my_dataviz');
 
-d3.select('body').append('h1').text('TEST')
+// d3.select('body').append('h1').text('TEST')
 
 // drawGraph()
 
-const svgGraph = d3.select('body').append('svg').attr('class', 'graph')
+const svgGraph = d3.select('#my_dataviz').append('svg').attr('class', 'graph')
 
+let tooltip = d3.select("#my_dataviz")
+  .append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
+  .style("background-color", "white")
+  .style("border", "solid")
+  .style("border-width", "1px")
+  .style("border-radius", "5px")
+  .style("padding", "10px")
 // moviesToCircles(Movies);
+
+// A function that change this tooltip when the user hover a point.
+// Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
+var mouseover = function (d) {
+  tooltip
+    .style("opacity", 1)
+}
+
+var mousemove = function (d) {
+  console.log(d)
+  tooltip
+    .html("The exact value of<br>the Ground Living area is: " + d[Title])
+    .style("left", (d3.pointers(this)[0] + 90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+    .style("top", (d3.pointers(this)[1]) + "px")
+}
+
+// A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
+var mouseleave = function (d) {
+  tooltip
+    .transition()
+    .duration(200)
+    .style("opacity", 0)
+}
 
 const margin = {
     top: 50,
@@ -59,10 +96,10 @@ svgGraph.append('g')
   .data(file)
   .enter()
   .append("circle")
-  .attr('cx', f => x(parseInt(f.Title.substring(f.Title.length - 5, f.Title.length-1))))
+  .attr('cx', f => x(parseInt(f.Title.substring(f.Title.length - 5, f.Title.length - 1))))
   .attr('cy', f => y((f['World Sales (in $)'])))
   .attr('r', 7)
-  .attr('fill',f => {
+  .attr('fill', f => {
     let themes = f.Genre.substring(
       f.Genre.indexOf('[') + 1,
       f.Genre.lastIndexOf(']')
@@ -117,16 +154,28 @@ svgGraph.append('g')
         break;
     }
   })
-
-
-// file.map((f, i) => {
-//   svgGraph.append('circle')
-//     .attr('cx', () => x(parseInt(f.Title.substring(f.Title.length - 5, f.Title.length-1))))
-//     .attr('cy', () => y(height-(f['World Sales (in $)'])))
-//     .attr('r', 5)
-//     .attr('fill','indianred')
+  .on("mouseover", mouseover)
+  .on("mousemove", mousemove)
+  .on("mouseleave", mouseleave)
+// .on("mouseover", function(f){
+//   console.log(42)
+//   tooltip.style("opacity", 1)
+//   d3.select(this)
+//     .style("stroke", "black")
+//     .style("opacity", 1)
 // })
-  // renderMovies(file);
+// .on("mousemove", f => {
+//   tooltip.html("The exact value of<br>this cell is: " + f.Title)
+//   .style("left", (d3.pointer(this)[0]+70) + "px")
+//   .style("top", (d3.pointer(this)[1]) + "px")
+// })
+// .on("mouseleave", f => {
+//   tooltip.style("opacity", 0)
+//   d3.select(this)
+//     .style("stroke", "none")
+//     .style("opacity", 0.8)
+// })
+
 
 async function loadJson(url) {
   const response = await fetch(url)
