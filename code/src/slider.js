@@ -3,7 +3,9 @@ import { getRelease } from "./loadMovies";
 const slider = document.getElementById('slider');
 const sliderDiv = document.getElementById('my_slider');
 const rangeValue = document.getElementById('range-value');
+const checkbox = document.getElementById('AllYears');
 
+console.log(checkbox)
 let years = getRelease()
 let tabYears = []
 years.forEach(year => {
@@ -18,6 +20,7 @@ export function getSlider(){
     slider.setAttribute('min', uniqueYears[1])
     slider.setAttribute('max', uniqueYears[uniqueYears.length - 1])
     slider.addEventListener("change", ()=> {
+    checkbox.checked = false;
      rangeValue.innerHTML = slider.value;
     }) 
 }
