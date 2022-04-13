@@ -41,8 +41,8 @@ svgGraph.append('g')
   .attr("transform", "rotate(-65)");;
 
 const y = d3.scalePow()
-  .exponent(0.5)
-  .domain([70000000, 2847246203])
+  .exponent(0.3)
+  .domain([70, 2847])
   .range([height, 0 + 10])
 
 svgGraph.append('g')
@@ -56,7 +56,7 @@ svgGraph.append('g')
   .enter()
   .append("circle")
   .attr('cx', f => x(parseInt(f.Title.substring(f.Title.length - 5, f.Title.length - 1))))
-  .attr('cy', f => y((f['World Sales (in $)'])))
+  .attr('cy', f => y((f['World Sales (in $)'])/1000000))
   .attr('r', 7)
   .attr('fill', f => {
     let themes = f.Genre.substring(

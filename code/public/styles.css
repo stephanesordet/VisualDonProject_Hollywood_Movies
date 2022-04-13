@@ -6,6 +6,8 @@ p, h1, h2, h3, h4 {
     display: none;
 }
 
+
+
 div.tooltip {
     position: absolute;
     text-align: center;
@@ -25,6 +27,7 @@ body {
 }
 div.graph {
     width: 70%;
+    padding-left: 2%;
 }
 div.movieDetails {
   width: 30%;
