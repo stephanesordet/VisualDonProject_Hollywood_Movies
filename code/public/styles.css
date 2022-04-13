@@ -20,22 +20,29 @@ div.tooltip {
     pointer-events: none;
   }
 
-/* make body a flexbox */
 body {
   display: flex;
 }
-/*make div.graph a flex item that fits 70% of parent*/
 div.graph {
     width: 70%;
 }
-/*make div.movieDetails a flex item that takes up the rest of the parent*/
 div.movieDetails {
   width: 30%;
 }
-.movieDetails img {
-display: block;
-margin-left: auto;
-margin-right: auto;
+
+div.detailsContent{
+    padding: 2%;
+}
+
+#movieDetails{
+    background-color: #F5F5F5;
+}
+
+#movieDetails img {
+    position: relative;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 div.genre {
@@ -138,4 +145,24 @@ div.block>*{
 
 .checkbox{
     margin-top: 2%;
+}
+
+/* align button#closeDetails to the middle of the .button div */
+#closeDetails {
+    position: relative;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #BD111A;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.9;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
 }

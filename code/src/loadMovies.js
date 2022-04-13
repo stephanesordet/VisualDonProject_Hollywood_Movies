@@ -42,6 +42,7 @@ async function renderMovies(movies) {
 
 export async function renderMovieDetails(event, movie){
   const newMovieDetail = TEMPLATE_MOVIE_DETAIL.content.cloneNode(true)
+  const closeButton = newMovieDetail.querySelector('#closeDetails');
   const titleWithoutYear = movie.Title.endsWith(')')? movie.Title.slice(0, movie.Title.length - 7) : movie.Title
   const posterURL = await loadJson(API_QUERY + titleWithoutYear.replaceAll(' ', '+'));
   const movieGenresArray = movie.Genre.substring(
@@ -60,6 +61,10 @@ export async function renderMovieDetails(event, movie){
   newMovieDetail.querySelector('.runtime').textContent = movie['Movie Runtime'];
   newMovieDetail.querySelector('.WorldSales').textContent = numeral(movie['World Sales (in $)']).format("$0,0");
   newMovieDetail.querySelector('.DomesticSales').textContent = numeral(movie['Domestic Sales (in $)']).format("$0,0");
+  closeButton.addEventListener('click', () => {
+    document.getElementById('my_slider').classList.remove('hidden');
+    movieDetail.classList.add('hidden');
+  })
   movieDetail.replaceChildren(newMovieDetail);
   document.getElementById('my_slider').classList.add('hidden');
   movieDetail.classList.remove('hidden');
