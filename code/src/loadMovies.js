@@ -61,6 +61,7 @@ export async function renderMovieDetails(event, movie){
   newMovieDetail.querySelector('.WorldSales').textContent = numeral(movie['World Sales (in $)']).format("$0,0");
   newMovieDetail.querySelector('.DomesticSales').textContent = numeral(movie['Domestic Sales (in $)']).format("$0,0");
   movieDetail.replaceChildren(newMovieDetail);
+  document.getElementById('my_slider').classList.add('hidden');
   movieDetail.classList.remove('hidden');
 }
 

@@ -131,7 +131,11 @@ div.block>*{
     font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #slider{
-    margin-top:5%;
+    margin-top:1.5%;
     height: 80%;
     vertical-align: middle;
+}
+
+.checkbox{
+    margin-top: 2%;
 }

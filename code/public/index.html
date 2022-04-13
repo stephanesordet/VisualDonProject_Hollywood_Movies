@@ -7,35 +7,50 @@
     <script src="../src/index.js" async></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-<div class="graph">
-    <h1>Movies with the highest Box Office between 1977 and 2021</h1>
-</div>
-<div id="movieDetails" class="hidden">
-    
-</div>
-<div id="my_slider">
-    <input id="slider" orient="vertical" type="range" step="1" min="" max="">
-    <span id="range-value">1977</span>
-</div>
-<template id="movieDetailTemplate">
-    <img class="poster" height="300" src="">
-    <h2 class="title"></h2>
-    <h3>Description</h3>
-    <p class="description"></p>
-    <h3>Genre(s)</h3>
-    <div class="genre"></div>
-    <div class="block">
-        <div><h3>Studio</h3>
-            <p class="studio"></p></div>
-        <div><h3>Runtime</h3>
-            <p class="runtime"></p></div></div>
-    <div class="block">
-        <div class="world"><h3>World Sales (USD)</h3>
-            <p class="WorldSales"></p></div>
-        <div class="domestic"><h3>Domestic Sales (USD)</h3>
-        <p class="DomesticSales"></p></div></div>
-</template>
+    <div class="graph">
+        <h1>Movies with the highest Box Office between 1977 and 2021</h1>
+    </div>
+    <div id="movieDetails" class="hidden">
+
+    </div>
+    <div id="my_slider">
+        <div class="checkbox">
+            <input type="checkbox" name="All Years" id="AllYears">
+            <label for="AllYears">All Years</label>
+        </div>
+        <input id="slider" orient="vertical" type="range" step="1" min="" max="">
+        <span id="range-value">1977</span>
+    </div>
+    <template id="movieDetailTemplate">
+        <img class="poster" height="300" src="">
+        <h2 class="title"></h2>
+        <h3>Description</h3>
+        <p class="description"></p>
+        <h3>Genre(s)</h3>
+        <div class="genre"></div>
+        <div class="block">
+            <div>
+                <h3>Studio</h3>
+                <p class="studio"></p>
+            </div>
+            <div>
+                <h3>Runtime</h3>
+                <p class="runtime"></p>
+            </div>
+        </div>
+        <div class="block">
+            <div class="world">
+                <h3>World Sales (USD)</h3>
+                <p class="WorldSales"></p>
+            </div>
+            <div class="domestic">
+                <h3>Domestic Sales (USD)</h3>
+                <p class="DomesticSales"></p>
+            </div>
+        </div>
+    </template>
 </body>
 
 </html>

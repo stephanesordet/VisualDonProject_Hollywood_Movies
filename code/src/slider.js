@@ -13,7 +13,6 @@ let uniqueYears = [...new Set(tabYears)]
 uniqueYears.sort()
 uniqueYears.splice(0 , 3)
 uniqueYears.pop()
-console.log(uniqueYears)
 
 export function getSlider(){
     slider.setAttribute('min', uniqueYears[1])
