@@ -1,3 +1,4 @@
+import { range } from "d3";
 import { getRelease } from "./loadMovies";
 
 const slider = document.getElementById('slider');
@@ -15,6 +16,14 @@ let uniqueYears = [...new Set(tabYears)]
 uniqueYears.sort()
 uniqueYears.splice(0 , 3)
 uniqueYears.pop()
+checkbox.addEventListener('input', ()=>{
+    if (checkbox.checked) {
+        rangeValue.innerHTML = ""; 
+        slider.value = 1977;
+    } else {
+        rangeValue.innerHTML = "1977"
+    }
+})
 
 export function getSlider(){
     slider.setAttribute('min', uniqueYears[1])

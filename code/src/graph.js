@@ -131,6 +131,7 @@ svgGraph.append('g')
 
     }
   })
+  .attr('data-year', f => f.Title.substring(f.Title.length-5, f.Title.length-1))
   .on("mouseover", function(event,d) {
     div.transition()
       .duration(200)
@@ -147,5 +148,5 @@ svgGraph.append('g')
   .on("click", function(event,d){
     renderMovieDetails(event, d);
   });
-
+  
 }

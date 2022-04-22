@@ -169,3 +169,8 @@ div.block>*{
   text-decoration: none;
   cursor: pointer;
 }
+
+input[type="range"] {
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+  }

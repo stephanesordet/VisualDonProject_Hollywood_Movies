@@ -32,6 +32,13 @@ function getMovies() {
   return Movies
 }
 
+// export async function getMovieByTitle(title){
+//   title = title.replaceAll('-', ' ');
+//   const movies = getMovies()
+//   const movie = movies.find(movie => movie.Title === title)
+//   return movie
+// }
+
 async function renderMovies(movies) {
   for (const movie of movies) {
     const movieTitle = movie.Title.slice(0, movie.Title.length - 7)
@@ -40,7 +47,8 @@ async function renderMovies(movies) {
   }
 }
 
-export async function renderMovieDetails(event, movie){
+export async function renderMovieDetails(event=false, movie){
+  // console.log(movie.Title)
   const newMovieDetail = TEMPLATE_MOVIE_DETAIL.content.cloneNode(true)
   const closeButton = newMovieDetail.querySelector('#closeDetails');
   const titleWithoutYear = movie.Title.endsWith(')')? movie.Title.slice(0, movie.Title.length - 7) : movie.Title
@@ -156,4 +164,15 @@ export function getRunTime() {
 
   })
   return RuntimeArray
+}
+
+//function that prints all unique distributors from movies.json
+export function getDistributors() {
+  const DistributorsArray = [];
+  const Movies = getMovies()
+  Movies.map((Movies, i) => {
+    DistributorsArray.push(Movies.Distributor)
+
+  })
+  return [...new Set(DistributorsArray)]
 }
