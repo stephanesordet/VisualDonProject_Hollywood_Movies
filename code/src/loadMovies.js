@@ -176,3 +176,25 @@ export function getDistributors() {
   })
   return [...new Set(DistributorsArray)]
 }
+
+export function getDistributorsForYear(year) {
+  const DistributorsArray = [];
+  const Movies = getMovies()
+  Movies.map((Movies, i) => {
+    if (Movies['Title'].includes('(' + year + ')')) {
+      DistributorsArray.push(Movies.Distributor)
+    }
+  })
+  return [...new Set(DistributorsArray)]
+}
+
+export function getMoviesForYear(year) {
+  const Movies = getMovies()
+  const MoviesArray = [];
+  Movies.map((Movies, i) => {
+    if (Movies['Title'].includes('(' + year + ')')) {
+      MoviesArray.push(Movies)
+    }
+  })
+  return MoviesArray
+}

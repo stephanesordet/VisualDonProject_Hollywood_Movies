@@ -1,4 +1,5 @@
 import { range } from "d3";
+import { getGraph } from "./graph";
 import { getRelease } from "./loadMovies";
 
 const slider = document.getElementById('slider');
@@ -20,8 +21,10 @@ checkbox.addEventListener('input', ()=>{
     if (checkbox.checked) {
         rangeValue.innerHTML = ""; 
         slider.value = 1977;
+        getGraph(false);
     } else {
         rangeValue.innerHTML = "1977"
+        getGraph(1977);
     }
 })
 
@@ -31,7 +34,7 @@ export function getSlider(){
     slider.addEventListener("input", ()=> {
         rangeValue.innerHTML = slider.value;
         checkbox.checked = false;
-         
+        getGraph(slider.value);         
     }) 
 }
 
