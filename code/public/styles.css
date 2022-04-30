@@ -2,6 +2,24 @@ p, h1, h2, h3, h4 {
     font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+html {
+    overflow: hidden;
+}
+
+h1.main-title {
+    width: 70%;
+    margin-top: 50;
+    margin-bottom: 50;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+
+}
+
+div.title-details {
+    display: flex;
+}
+
 .hidden {
     display: none;
 }
@@ -22,7 +40,7 @@ div.tooltip {
     pointer-events: none;
   }
 
-body {
+body .dataviz{
   display: flex;
 }
 div.graph {
@@ -30,7 +48,7 @@ div.graph {
     padding-left: 2%;
 }
 div.movieDetails {
-  width: 30%;
+  max-width: 25%;
 }
 
 div.detailsContent{
@@ -38,12 +56,15 @@ div.detailsContent{
 }
 
 #movieDetails{
+    max-width: 30%;
+    height: auto;
+    margin-bottom: -100%;
     background-color: #F5F5F5;
 }
 
 #movieDetails img {
     position: relative;
-    top: 17%;
+    top: 9%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

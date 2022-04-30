@@ -48,7 +48,7 @@ async function renderMovies(movies) {
 }
 
 export async function renderMovieDetails(event=false, movie){
-  // console.log(movie.Title)
+
   const newMovieDetail = TEMPLATE_MOVIE_DETAIL.content.cloneNode(true)
   const closeButton = newMovieDetail.querySelector('#closeDetails');
   const titleWithoutYear = movie.Title.endsWith(')')? movie.Title.slice(0, movie.Title.length - 7) : movie.Title
@@ -143,9 +143,71 @@ export function getWorldSales() {
   const Movies = getMovies()
   Movies.map((Movies, i) => {
     WorldSalesArray.push(Movies['World Sales (in $)'])
-
   })
   return WorldSalesArray
+}
+
+export function getInflatedWorldSales(){
+  const inflationDictionary = {
+    '1970': 6.21,
+    '1972': 5.75,
+    '1973': 5.42,
+    '1975': 4.48,
+    '1977': 3.98,
+    '1978': 3.7,
+    '1979': 3.32,
+    '1980': 2.92,
+    '1981': 2.65,
+    '1982': 2.5,
+    '1983': 2.42,
+    '1984': 2.32,
+    '1985': 2.24,
+    '1986': 2.2,
+    '1987': 2.12,
+    '1988': 2.04,
+    '1989': 1.94,
+    '1990': 1.84,
+    '1991': 1.77,
+    '1992': 1.72,
+    '1993': 1.67,
+    '1994': 1.63,
+    '1995': 1.58,
+    '1996': 1.54,
+    '1997': 1.5,
+    '1998': 1.48,
+    '1999': 1.45,
+    '2000': 1.4,
+    '2001': 1.36,
+    '2002': 1.34,
+    '2003': 1.31,
+    '2004': 1.28,
+    '2005': 1.23,
+    '2006': 1.2,
+    '2007': 1.16,
+    '2008': 1.12,
+    '2009': 1.12,
+    '2010': 1.1,
+    '2011': 1.07,
+    '2012': 1.05,
+    '2013': 1.03,
+    '2014': 1.02,
+    '2015': 1.02,
+    '2016': 1,
+    '2017': 1,
+    '2018': 1,
+    '2019': 1,
+    '2020': 1,
+    '2021': 1,
+    '2022': 1
+  }
+  const inflationArray = [];
+  const Movies = getMovies();
+  Movies.map((Movies, i) => {
+    const year = Movies.Title.substring(Movies.Title.length - 5, Movies.Title.length - 1)
+    inflationArray.push(Movies['World Sales (in $)']*inflationDictionary[year])
+  })
+  inflationArray.sort((a, b) => a - b);
+  return inflationArray
 }
 
 export function getGenre() {
@@ -175,6 +237,16 @@ export function getDistributors() {
 
   })
   return [...new Set(DistributorsArray)]
+}
+
+export function getYears(){
+  const Movies = getMovies()
+  const YearsArray = [];
+  Movies.map((Movies, i) => {
+    YearsArray.push(Movies.Title.substring(Movies.Title.length - 5, Movies.Title.length - 1))
+  })
+  YearsArray.sort((a, b) => a - b);
+  return [...new Set(YearsArray)];
 }
 
 export function getDistributorsForYear(year) {
