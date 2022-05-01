@@ -260,7 +260,7 @@ export async function getGraph(year = false, inflation = false) {
           const amount = f['World Sales (in $)'];
           const year = f.Title.substring(f.Title.length - 5, f.Title.length - 1);
           const adjustedAmount = Math.floor(amount * inflationDictionary[year]);
-          return (adjustedAmount/1000000);})
+          return y(adjustedAmount/1000000);})
         .attr('r', 7)
         .attr('fill', f => {
           let themes = f.Genre.substring(
@@ -370,8 +370,114 @@ export async function getGraph(year = false, inflation = false) {
     svgGraph.append('g')
       .attr("transform", "translate(5," + height + ")")
       .call(d3.axisTop(x).ticks(yearsDistributors.length - 1).tickSize(10)).selectAll("text")
+    
+    if (inflation) {
+      svgGraph.append('g')
+      .attr("transform", "translate(5,0)")
+      .attr('class', 'all-movies')
+      .selectAll("circle")
+      .data(movies)
+      .enter()
+      .append("circle")
+      .attr('cx', f => x(yearsDistributors.indexOf(f['Distributor'])))
+      .attr('cy', (f) => {
+        const amount = f['World Sales (in $)'];
+        const year = f.Title.substring(f.Title.length - 5, f.Title.length - 1);
+        const adjustedAmount = Math.floor(amount * inflationDictionary[year]);
+        return y(adjustedAmount/1000000);})
+      .attr('r', 7)
+      .attr('fill', f => {
+        let themes = f.Genre.substring(
+          f.Genre.indexOf('[') + 1,
+          f.Genre.lastIndexOf(']')
+        )
+        let genre = themes.split(' ')
+        genre = genre[0].substring(
+          genre[0].indexOf("'") + 1,
+          genre[0].lastIndexOf("'")
+        )
+        switch (genre) {
+          case 'Action':
+            return '#B3494C';
+            break;
+          case 'Adventure':
+            return '#206632';
+            break;
+          case 'Animation':
+            return '#C7541A';
+            break;
+          case 'Comedy':
+            return '#1B8287';
+            break;
+          case 'Crime':
+            return '#1F5F5B';
+            break;
+          case 'Documentary':
+            return '#159947';
+            break;
+          case 'Drama':
+            return '#703D00';
+            break;
+          case 'Family':
+            return '#991C15';
+            break;
+          case 'Fantasy':
+            return '#49B265';
+            break;
+          case 'Biography':
+          case 'History':
+            return '#49ABA4';
+            break;
+          case 'Horror':
+            return '#06373A';
+            break;
+          case 'Music':
+          case 'Musical':
+            return '#066EC7';
+            break;
+          case 'Mystery':
+            return '#A43600';
+            break;
+          case 'Romance':
+            return '#0A5070';
+            break;
+          case 'Sci-Fi':
+            return '#061A23';
+            break;
+          case 'Sport':
+            return '#C71810';
+            break;
+          case 'Thriller':
+            return '#5282AB';
+            break;
+          case 'War':
+            return '#1F5232';
+            break;
+          case 'Western':
+            return '#85407A';
+            break;
 
-    svgGraph.append('g')
+        }
+      })
+      .attr('data-year', f => f.Title.substring(f.Title.length - 5, f.Title.length - 1))
+      .on("mouseover", function (event, d) {
+        div.transition()
+          .duration(200)
+          .style("opacity", .9);
+        div.html((d.Title) + "<br/>" + "Cliquez pour plus d'informations")
+          .style("left", (event.pageX + 10) + "px")
+          .style("top", (event.pageY - 28) + "px");
+      })
+      .on("mouseout", function (d) {
+        div.transition()
+          .duration(500)
+          .style("opacity", 0);
+      })
+      .on("click", function (event, d) {
+        renderMovieDetails(event, d);
+      });
+    } else {
+      svgGraph.append('g')
       .attr("transform", "translate(5,0)")
       .attr('class', 'all-movies')
       .selectAll("circle")
@@ -471,6 +577,7 @@ export async function getGraph(year = false, inflation = false) {
       .on("click", function (event, d) {
         renderMovieDetails(event, d);
       });
+    }
 
   }
 
