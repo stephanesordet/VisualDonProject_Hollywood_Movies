@@ -4,7 +4,7 @@ import {getSlider} from './slider';
 import { getMovieByTitle, renderMovieDetails, getDistributors, getYears, getInflatedWorldSales } from './loadMovies';
 d3.select('body').append('div').attr('id', 'my_dataviz');
 
-getGraph(false, true)
+getGraph()
 getSlider()
 
 

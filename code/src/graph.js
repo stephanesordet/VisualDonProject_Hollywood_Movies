@@ -122,12 +122,12 @@ export async function getGraph(year = false, inflation = false) {
     if (inflation) {
       y = d3.scalePow()
         .exponent(0.3)
-        .domain([70, 3302])
+        .domain([70, 3500])
         .range([height, 0 + 10])
     } else {
       y = d3.scalePow()
         .exponent(0.3)
-        .domain([70, 2847])
+        .domain([60, 3000])
         .range([height, 0 + 10])
     }
 

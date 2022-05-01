@@ -16,26 +16,24 @@ const yearsCheckbox = document.getElementById('AllYears');
 const inflationCheckbox = document.getElementById('Inflation');
 
 yearsCheckbox.checked = true;
+inflationCheckbox.checked = false;
 const uniqueYears = getYears()
 
 inflationCheckbox.addEventListener('input', () => {
     if (inflationCheckbox.checked) {
         if (yearsCheckbox.checked) {
-            rangeValue.innerHTML = "";
-            slider.value = 0;
             getGraph(false, true);
         } else {
-            rangeValue.innerHTML = uniqueYears[0]
-            getGraph(uniqueYears[0], true);
+            console.log(42)
+            rangeValue.innerHTML = uniqueYears[slider.value]
+            getGraph(uniqueYears[slider.value], true);
         }
     } else {
         if (yearsCheckbox.checked) {
-            rangeValue.innerHTML = "";
-            slider.value = 0;
             getGraph(false, false);
         } else {
-            rangeValue.innerHTML = uniqueYears[0]
-            getGraph(uniqueYears[0], false);
+            rangeValue.innerHTML = uniqueYears[slider.value]
+            getGraph(uniqueYears[slider.value], false);
         }
     }
 })
