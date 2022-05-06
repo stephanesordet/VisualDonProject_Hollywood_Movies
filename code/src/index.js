@@ -1,6 +1,6 @@
 import * as d3 from 'd3';
 import { getGraph } from './graph';
-import {getSlider} from './slider';
+import {getSlider, readScroll} from './slider';
 import { getMovieByTitle, renderMovieDetails, getDistributors, getYears, getInflatedWorldSales } from './loadMovies';
 d3.select('body').append('div').attr('id', 'my_dataviz');
 
@@ -26,6 +26,7 @@ const GenreArray = []
 const RuntimeArray = []
 
 const inflatedArray = getInflatedWorldSales();
-console.log(inflatedArray[0]/1000000)
-console.log(inflatedArray[inflatedArray.length - 1]/1000000)
 
+window.addEventListener('wheel', (e) => {
+    readScroll(e.deltaY);
+});

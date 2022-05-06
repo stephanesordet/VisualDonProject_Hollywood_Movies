@@ -41,19 +41,23 @@ inflationCheckbox.addEventListener('input', () => {
 yearsCheckbox.addEventListener('input', () => {
     if (yearsCheckbox.checked) {
         if (inflationCheckbox.checked) {
+            console.log(42);
             rangeValue.innerHTML = "";
-            slider.value = 0;
+            slider.value = uniqueYears.length-1;
             getGraph(false, true);
         } else {
-            rangeValue.innerHTML = uniqueYears[0]
+            rangeValue.innerHTML = ""
+            slider.value = uniqueYears.length-1;
             getGraph(false, false);
         }
     } else {
         if (inflationCheckbox.checked) {
             rangeValue.innerHTML = uniqueYears[0]
+            slider.value = 0;
             getGraph(uniqueYears[0], true);
         } else {
             rangeValue.innerHTML = uniqueYears[0]
+            slider.value = 0;
             getGraph(uniqueYears[0], false);
         }
     }
@@ -72,3 +76,27 @@ export function getSlider() {
         }
     })
 }
+
+
+export function readScroll(deltaY) {
+    let checker;
+    if (deltaY > 0) {
+        if (slider.value > 0) {
+        slider.value--;
+        checker = true
+        }
+    } else {
+        if (slider.value < uniqueYears.length - 1) {
+        slider.value++;
+        checker = true
+        }
+    }
+    if (checker) {
+    document.querySelectorAll('.tooltip').forEach(tooltip => {
+        tooltip.style.display = 'none';
+    })
+    rangeValue.innerHTML = uniqueYears[slider.value]
+    yearsCheckbox.checked = false;
+    getGraph(uniqueYears[slider.value]);
+}
+} 

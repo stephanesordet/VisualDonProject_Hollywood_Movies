@@ -122,7 +122,7 @@ export async function getGraph(year = false, inflation = false) {
     if (inflation) {
       y = d3.scalePow()
         .exponent(0.3)
-        .domain([70, 3500])
+        .domain([70, 3600])
         .range([height, 0 + 10])
     } else {
       y = d3.scalePow()
@@ -154,7 +154,7 @@ export async function getGraph(year = false, inflation = false) {
         .data(file)
         .enter()
         .append("circle")
-        .attr('cx', f => x(parseInt(f.Title.substring(f.Title.length - 5, f.Title.length - 1))))
+        .attr('cx', -200)
         .attr('cy', f => y((f['World Sales (in $)']) / 1000000))
         .attr('r', 7)
         .attr('fill', f => {
@@ -246,7 +246,24 @@ export async function getGraph(year = false, inflation = false) {
         })
         .on("click", function (event, d) {
           renderMovieDetails(event, d);
-        });
+        })
+        .transition()
+      .delay(function (d, i) {
+        if (i < 3) {
+          return i*25;
+        } else if(i < 6) {
+          return i*20;
+        } else if(i < 10) {
+          return i*15;
+        } else if(i < 15) {
+          return i*10;
+        } else if(i < 20) {
+          return i*5;
+        } else {
+          return i*2;
+        }
+      })
+      .attr('cx', f => x(parseInt(f.Title.substring(f.Title.length - 5, f.Title.length - 1))));
     } else {
       svgGraph.append('g')
         .attr("transform", "translate(5,0)")
@@ -255,7 +272,7 @@ export async function getGraph(year = false, inflation = false) {
         .data(file)
         .enter()
         .append("circle")
-        .attr('cx', f => x(parseInt(f.Title.substring(f.Title.length - 5, f.Title.length - 1))))
+        .attr('cx', -200)
         .attr('cy', (f) => {
           const amount = f['World Sales (in $)'];
           const year = f.Title.substring(f.Title.length - 5, f.Title.length - 1);
@@ -351,7 +368,24 @@ export async function getGraph(year = false, inflation = false) {
         })
         .on("click", function (event, d) {
           renderMovieDetails(event, d);
-        });
+        })
+        .transition()
+      .delay(function (d, i) {
+        if (i < 3) {
+          return i*25;
+        } else if(i < 6) {
+          return i*20;
+        } else if(i < 10) {
+          return i*15;
+        } else if(i < 15) {
+          return i*10;
+        } else if(i < 20) {
+          return i*5;
+        } else {
+          return i*2;
+        }
+      })
+      .attr('cx', f => x(parseInt(f.Title.substring(f.Title.length - 5, f.Title.length - 1))));
     }
 
   } else {
@@ -362,7 +396,7 @@ export async function getGraph(year = false, inflation = false) {
       x = d3.scaleLinear()
         .domain([0, 1])
         .range([10, width])
-    } else {
+    }else {
       x = d3.scaleLinear()
         .domain([0, yearsDistributors.length - 1])
         .range([10, width])
@@ -379,7 +413,7 @@ export async function getGraph(year = false, inflation = false) {
       .data(movies)
       .enter()
       .append("circle")
-      .attr('cx', f => x(yearsDistributors.indexOf(f['Distributor'])))
+      .attr('cx', -200)
       .attr('cy', (f) => {
         const amount = f['World Sales (in $)'];
         const year = f.Title.substring(f.Title.length - 5, f.Title.length - 1);
@@ -475,7 +509,24 @@ export async function getGraph(year = false, inflation = false) {
       })
       .on("click", function (event, d) {
         renderMovieDetails(event, d);
-      });
+      })
+      .transition()
+      .delay(function (d, i) {
+        if (i < 3) {
+          return i*100;
+        } else if(i < 6) {
+          return i*80;
+        } else if(i < 10) {
+          return i*60;
+        } else if(i < 15) {
+          return i*40;
+        } else if(i < 20) {
+          return i*20;
+        } else {
+          return i*10;
+        }
+      })
+      .attr('cx', f => x(yearsDistributors.indexOf(f['Distributor'])));
     } else {
       svgGraph.append('g')
       .attr("transform", "translate(5,0)")
@@ -484,7 +535,7 @@ export async function getGraph(year = false, inflation = false) {
       .data(movies)
       .enter()
       .append("circle")
-      .attr('cx', f => x(yearsDistributors.indexOf(f['Distributor'])))
+      .attr('cx', -200)
       .attr('cy', f => y((f['World Sales (in $)']) / 1000000))
       .attr('r', 7)
       .attr('fill', f => {
@@ -576,7 +627,24 @@ export async function getGraph(year = false, inflation = false) {
       })
       .on("click", function (event, d) {
         renderMovieDetails(event, d);
-      });
+      })
+      .transition()
+      .delay(function (d, i) {
+        if (i < 3) {
+          return i*100;
+        } else if(i < 6) {
+          return i*80;
+        } else if(i < 10) {
+          return i*60;
+        } else if(i < 15) {
+          return i*40;
+        } else if(i < 20) {
+          return i*20;
+        } else {
+          return i*10;
+        }
+      })
+      .attr('cx', f => x(yearsDistributors.indexOf(f['Distributor'])));
     }
 
   }
