@@ -100,3 +100,24 @@ export function readScroll(deltaY) {
     getGraph(uniqueYears[slider.value]);
 }
 } 
+
+document.querySelectorAll('#colorsLegend button').forEach(genre => {
+    genre.addEventListener('click', () => {
+        if (inflationCheckbox.checked) {
+            if (yearsCheckbox.checked) {
+                getGraph(false, true, genre.innerHTML);
+            } else {
+                console.log(42)
+                rangeValue.innerHTML = uniqueYears[slider.value]
+                getGraph(uniqueYears[slider.value], true, genre.innerHTML);
+            }
+        } else {
+            if (yearsCheckbox.checked) {
+                getGraph(false, false, genre.innerHTML);
+            } else {
+                rangeValue.innerHTML = uniqueYears[slider.value]
+                getGraph(uniqueYears[slider.value], false, genre.innerHTML);
+            }
+        }
+    })
+  })

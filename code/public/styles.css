@@ -161,7 +161,7 @@ div.block>*{
     font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 #slider{
-    margin-top:1.5%;
+    margin-top:10%;
     height: 80%;
     vertical-align: middle;
 }
@@ -195,6 +195,63 @@ input[type="range"] {
     -webkit-appearance: slider-vertical;
   }
 
+button.Action {
+    background-color: #B3494C;
+}
+button.Adventure {
+    background-color: #206632;
+}
+button.Animation {
+    background-color: #C7541A;
+}
+button.Comedy {
+    background-color: #1B8287;
+}
+button.Crime {
+    background-color: #1F5F5B;
+}
+button.Documentary {
+    background-color: #159947;
+}
+button.Drama {
+    background-color: #703D00;
+}
+button.Family {
+    background-color: #991C15;
+}
+button.Fantasy {
+    background-color: #49B265;
+}
+button.History, p.Biography{
+    background-color: #49ABA4;
+}
+button.Horror {
+    background-color: #06373A;
+}
+button.Musical, p.Music {
+    background-color: #066EC7;
+}
+button.Mystery {
+    background-color: #A43600;
+}
+button.Romance {
+    background-color: #0A5070;
+}
+button.Sci-Fi {
+    background-color: #061A23;
+}
+button.Sport {
+    background-color: #C71810;
+}
+button.Thriller {
+    background-color: #5282AB;
+}
+button.War {
+    background-color: #1F5232;
+}
+button.Western {
+    background-color: #85407A;
+}
 #colorsLegend {
     position: relative;
     width: 100px;
@@ -203,11 +260,18 @@ input[type="range"] {
     margin: 50px 50px 0 100px;
 }
 
-#colorsLegend p {
+#colorsLegend button {
     width: 100%;
     padding: 2px;
     border: 1px solid black;
     border-radius: 3px;
     text-align: center;
     color: white;
+    margin: 10px;
+    transition-duration: 0.4s;
+}
+
+#colorsLegend button:hover {
+    background-color: white;
+    color: black;
 }

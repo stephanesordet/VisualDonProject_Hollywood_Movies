@@ -1,4 +1,5 @@
 import {
+  interpolateMagma,
   tickFormat
 } from 'd3'
 import * as d3 from 'd3';
@@ -262,13 +263,31 @@ export function getDistributorsForYear(year) {
   return [...new Set(DistributorsArray)]
 }
 
-export function getMoviesForYear(year) {
+export function getMoviesForYear(year, movieGenre) {
   const Movies = getMovies()
   const MoviesArray = [];
   Movies.map((Movies, i) => {
-    if (Movies['Title'].includes('(' + year + ')')) {
+    if(movieGenre!=null){
+    if (Movies['Title'].includes('(' + year + ')') && Movies['Genre'].includes(movieGenre)) {
+      MoviesArray.push(Movies)
+    }}
+    else{
+      if (Movies['Title'].includes('(' + year + ')')) {
+        MoviesArray.push(Movies)
+      } 
+    }
+  })
+  return MoviesArray
+}
+
+export function getMoviesForGenre(movieGenre) {
+  const Movies = getMovies()
+  const MoviesArray = [];
+  Movies.map((Movies, i) => {
+    if (Movies['Genre'].includes(movieGenre)) {
       MoviesArray.push(Movies)
     }
   })
+
   return MoviesArray
 }
