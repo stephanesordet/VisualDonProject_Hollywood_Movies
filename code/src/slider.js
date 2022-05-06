@@ -80,15 +80,21 @@ export function getSlider() {
 
 export function readScroll(deltaY) {
     let checker;
+    
+    const random = Math.floor(Math.random()*5);
     if (deltaY > 0) {
         if (slider.value > 0) {
+            if (random%5 === 0) {
         slider.value--;
         checker = true
+            }
         }
     } else {
         if (slider.value < uniqueYears.length - 1) {
+            if (random%5 === 0) {
         slider.value++;
         checker = true
+            }
         }
     }
     if (checker) {
