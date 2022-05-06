@@ -71,10 +71,12 @@ export async function renderMovieDetails(event=false, movie){
   newMovieDetail.querySelector('.DomesticSales').textContent = numeral(movie['Domestic Sales (in $)']).format("$0,0");
   closeButton.addEventListener('click', () => {
     document.getElementById('my_slider').classList.remove('hidden');
+    document.getElementById('colorsLegend').classList.remove('hidden');
     movieDetail.classList.add('hidden');
   })
   movieDetail.replaceChildren(newMovieDetail);
   document.getElementById('my_slider').classList.add('hidden');
+  document.getElementById('colorsLegend').classList.add('hidden');
   movieDetail.classList.remove('hidden');
 }
 

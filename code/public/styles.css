@@ -194,3 +194,20 @@ input[type="range"] {
     writing-mode: bt-lr;
     -webkit-appearance: slider-vertical;
   }
+
+#colorsLegend {
+    position: relative;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    margin: 50px 50px 0 100px;
+}
+
+#colorsLegend p {
+    width: 100%;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+}
