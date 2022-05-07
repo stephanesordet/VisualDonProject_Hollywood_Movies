@@ -110,7 +110,7 @@ p.Family {
 p.Fantasy {
     background-color: #49B265;
 }
-p.History, p.Biography{
+p.History{
     background-color: #49ABA4;
 }
 p.Horror {
@@ -222,13 +222,13 @@ button.Family {
 button.Fantasy {
     background-color: #49B265;
 }
-button.History, p.Biography{
+button.History{
     background-color: #49ABA4;
 }
 button.Horror {
     background-color: #06373A;
 }
-button.Musical, p.Music {
+button.Music {
     background-color: #066EC7;
 }
 button.Mystery {
@@ -261,13 +261,14 @@ button.Western {
 }
 
 #colorsLegend button {
+    font-size: 0.9em;
     width: 100%;
-    padding: 2px;
+    padding: 3px;
     border: 1px solid black;
     border-radius: 3px;
     text-align: center;
     color: white;
-    margin: 10px;
+    margin: 9%;
     transition-duration: 0.4s;
 }
 

@@ -151,7 +151,7 @@
    "Domestic Sales (in $)": 543638043,
    "International Sales (in $)": 1119261396,
    "World Sales (in $)": 1662899439,
-   "Genre": "['Adventure', 'Animation', 'Drama', 'Family', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Drama', 'Family', 'Music']",
    "Movie Runtime": "1 hr 58 min",
    "License": "PG"
  },
@@ -203,7 +203,7 @@
    "Domestic Sales (in $)": 504481165,
    "International Sales (in $)": 769095055,
    "World Sales (in $)": 1273576220,
-   "Genre": "['Adventure', 'Family', 'Fantasy', 'Musical', 'Romance']",
+   "Genre": "['Adventure', 'Family', 'Fantasy', 'Music', 'Romance']",
    "Movie Runtime": "2 hr 9 min",
    "License": "PG"
  },
@@ -229,7 +229,7 @@
    "Domestic Sales (in $)": 477373578,
    "International Sales (in $)": 972653355,
    "World Sales (in $)": 1450026933,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music']",
    "Movie Runtime": "1 hr 43 min",
    "License": "PG"
  },
@@ -372,7 +372,7 @@
    "Domestic Sales (in $)": 422783777,
    "International Sales (in $)": 640828028,
    "World Sales (in $)": 1063611805,
-   "Genre": "['Adventure', 'Animation', 'Drama', 'Family', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Drama', 'Family', 'Music']",
    "Movie Runtime": "1 hr 28 min",
    "License": "G"
  },
@@ -515,7 +515,7 @@
    "Domestic Sales (in $)": 400953009,
    "International Sales (in $)": 880555091,
    "World Sales (in $)": 1281508100,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music']",
    "Movie Runtime": "1 hr 42 min",
    "License": "PG"
  },
@@ -697,7 +697,7 @@
    "Domestic Sales (in $)": 355559216,
    "International Sales (in $)": 695134737,
    "World Sales (in $)": 1050693953,
-   "Genre": "['Adventure', 'Comedy', 'Family', 'Fantasy', 'Musical', 'Romance']",
+   "Genre": "['Adventure', 'Comedy', 'Family', 'Fantasy', 'Music', 'Romance']",
    "Movie Runtime": "2 hr 8 min",
    "License": "PG"
  },
@@ -736,7 +736,7 @@
    "Domestic Sales (in $)": 350126372,
    "International Sales (in $)": 197300000,
    "World Sales (in $)": 547426372,
-   "Genre": "['Action', 'Biography', 'Drama', 'War']",
+   "Genre": "['Action', 'History', 'Drama', 'War']",
    "Movie Runtime": "2 hr 13 min",
    "License": "R"
  },
@@ -1425,7 +1425,7 @@
    "Domestic Sales (in $)": 271094731,
    "International Sales (in $)": 241474088,
    "World Sales (in $)": 512568819,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music']",
    "Movie Runtime": "1 hr 25 min",
    "License": "PG"
  },
@@ -1438,7 +1438,7 @@
    "Domestic Sales (in $)": 270448425,
    "International Sales (in $)": 363759959,
    "World Sales (in $)": 634208384,
-   "Genre": "['Animation', 'Comedy', 'Family', 'Musical']",
+   "Genre": "['Animation', 'Comedy', 'Family', 'Music']",
    "Movie Runtime": "1 hr 48 min",
    "License": "PG"
  },
@@ -1620,7 +1620,7 @@
    "Domestic Sales (in $)": 255959475,
    "International Sales (in $)": 53248834,
    "World Sales (in $)": 309208309,
-   "Genre": "['Biography', 'Drama', 'Sport']",
+   "Genre": "['History', 'Drama', 'Sport']",
    "Movie Runtime": "2 hr 9 min",
    "License": "PG-13"
  },
@@ -1724,7 +1724,7 @@
    "Domestic Sales (in $)": 248757044,
    "International Sales (in $)": 395379444,
    "World Sales (in $)": 644136488,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music']",
    "Movie Runtime": "1 hr 47 min",
    "License": "NA"
  },
@@ -2205,7 +2205,7 @@
    "Domestic Sales (in $)": 219614612,
    "International Sales (in $)": 223525393,
    "World Sales (in $)": 443140005,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Drama', 'Family', 'Fantasy', 'Music', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Drama', 'Family', 'Fantasy', 'Music', 'Music']",
    "Movie Runtime": "1 hr 28 min",
    "License": "PG"
  },
@@ -2231,7 +2231,7 @@
    "Domestic Sales (in $)": 218967620,
    "International Sales (in $)": 186043788,
    "World Sales (in $)": 424967620,
-   "Genre": "['Animation', 'Family', 'Fantasy', 'Musical', 'Romance']",
+   "Genre": "['Animation', 'Family', 'Fantasy', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 24 min",
    "License": "NA"
  },
@@ -2309,7 +2309,7 @@
    "Domestic Sales (in $)": 217350219,
    "International Sales (in $)": 286700000,
    "World Sales (in $)": 504050219,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Musical', 'Romance']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 30 min",
    "License": "NA"
  },
@@ -2322,7 +2322,7 @@
    "Domestic Sales (in $)": 217326974,
    "International Sales (in $)": 148025572,
    "World Sales (in $)": 365352546,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Drama', 'Family', 'Fantasy', 'Music', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Drama', 'Family', 'Fantasy', 'Music', 'Music']",
    "Movie Runtime": "1 hr 32 min",
    "License": "PG"
  },
@@ -2348,7 +2348,7 @@
    "Domestic Sales (in $)": 216668042,
    "International Sales (in $)": 694141269,
    "World Sales (in $)": 910809311,
-   "Genre": "['Biography', 'Drama', 'Music']",
+   "Genre": "['History', 'Drama', 'Music']",
    "Movie Runtime": "2 hr 14 min",
    "License": "PG-13"
  },
@@ -2439,7 +2439,7 @@
    "Domestic Sales (in $)": 214030500,
    "International Sales (in $)": 134809816,
    "World Sales (in $)": 348840316,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Drama', 'Family', 'Fantasy', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Drama', 'Family', 'Fantasy', 'Music']",
    "Movie Runtime": "1 hr 26 min",
    "License": "PG"
  },
@@ -2634,7 +2634,7 @@
    "Domestic Sales (in $)": 206459076,
    "International Sales (in $)": 268509687,
    "World Sales (in $)": 474968763,
-   "Genre": "['Adventure', 'Comedy', 'Family', 'Fantasy', 'Musical']",
+   "Genre": "['Adventure', 'Comedy', 'Family', 'Fantasy', 'Music']",
    "Movie Runtime": "1 hr 55 min",
    "License": "PG"
  },
@@ -2790,7 +2790,7 @@
    "Domestic Sales (in $)": 200821936,
    "International Sales (in $)": 391640880,
    "World Sales (in $)": 592462816,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Musical', 'Romance']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 40 min",
    "License": "PG"
  },
@@ -2868,7 +2868,7 @@
    "Domestic Sales (in $)": 198000317,
    "International Sales (in $)": 186335791,
    "World Sales (in $)": 384336108,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Music', 'Musical', 'Romance']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Music', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 48 min",
    "License": "PG"
  },
@@ -3024,7 +3024,7 @@
    "Domestic Sales (in $)": 190071103,
    "International Sales (in $)": 206200000,
    "World Sales (in $)": 396271103,
-   "Genre": "['Comedy', 'Musical', 'Romance']",
+   "Genre": "['Comedy', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 50 min",
    "License": "PG"
  },
@@ -3089,7 +3089,7 @@
    "Domestic Sales (in $)": 187935490,
    "International Sales (in $)": 126279964,
    "World Sales (in $)": 314215454,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music']",
    "Movie Runtime": "1 hr 40 min",
    "License": "NA"
  },
@@ -3297,7 +3297,7 @@
    "Domestic Sales (in $)": 182207973,
    "International Sales (in $)": 93085477,
    "World Sales (in $)": 275293450,
-   "Genre": "['Biography', 'Drama', 'History', 'War']",
+   "Genre": "['History', 'Drama', 'History', 'War']",
    "Movie Runtime": "2 hr 30 min",
    "License": "PG-13"
  },
@@ -3661,7 +3661,7 @@
    "Domestic Sales (in $)": 174340174,
    "International Sales (in $)": 262609460,
    "World Sales (in $)": 436949634,
-   "Genre": "['Biography', 'Drama', 'Musical']",
+   "Genre": "['History', 'Drama', 'Music']",
    "Movie Runtime": "1 hr 45 min",
    "License": "PG"
  },
@@ -3791,7 +3791,7 @@
    "Domestic Sales (in $)": 171958438,
    "International Sales (in $)": 177587704,
    "World Sales (in $)": 349546142,
-   "Genre": "['Adventure', 'Comedy', 'Family', 'Fantasy', 'Musical']",
+   "Genre": "['Adventure', 'Comedy', 'Family', 'Fantasy', 'Music']",
    "Movie Runtime": "2 hr 10 min",
    "License": "PG"
  },
@@ -3856,7 +3856,7 @@
    "Domestic Sales (in $)": 170742341,
    "International Sales (in $)": 146048916,
    "World Sales (in $)": 316791257,
-   "Genre": "['Biography', 'Drama']",
+   "Genre": "['History', 'Drama']",
    "Movie Runtime": "2 hr 15 min",
    "License": "PG-13"
  },
@@ -3869,7 +3869,7 @@
    "Domestic Sales (in $)": 170687518,
    "International Sales (in $)": 136089214,
    "World Sales (in $)": 306776732,
-   "Genre": "['Comedy', 'Crime', 'Musical']",
+   "Genre": "['Comedy', 'Crime', 'Music']",
    "Movie Runtime": "1 hr 53 min",
    "License": "PG-13"
  },
@@ -3908,7 +3908,7 @@
    "Domestic Sales (in $)": 169607287,
    "International Sales (in $)": 66349611,
    "World Sales (in $)": 235956898,
-   "Genre": "['Biography', 'Drama', 'History']",
+   "Genre": "['History', 'Drama', 'History']",
    "Movie Runtime": "2 hr 7 min",
    "License": "PG"
  },
@@ -4129,7 +4129,7 @@
    "Domestic Sales (in $)": 164615351,
    "International Sales (in $)": 187498961,
    "World Sales (in $)": 352114312,
-   "Genre": "['Biography', 'Crime', 'Drama']",
+   "Genre": "['History', 'Crime', 'Drama']",
    "Movie Runtime": "2 hr 21 min",
    "License": "PG-13"
  },
@@ -4155,7 +4155,7 @@
    "Domestic Sales (in $)": 163566459,
    "International Sales (in $)": 143561166,
    "World Sales (in $)": 307127625,
-   "Genre": "['Biography', 'Drama']",
+   "Genre": "['History', 'Drama']",
    "Movie Runtime": "1 hr 57 min",
    "License": "PG-13"
  },
@@ -4298,7 +4298,7 @@
    "Domestic Sales (in $)": 161197785,
    "International Sales (in $)": 40437206,
    "World Sales (in $)": 201634991,
-   "Genre": "['Biography', 'Drama', 'History', 'Music']",
+   "Genre": "['History', 'Drama', 'History', 'Music']",
    "Movie Runtime": "2 hr 27 min",
    "License": "R"
  },
@@ -4662,7 +4662,7 @@
    "Domestic Sales (in $)": 153707064,
    "International Sales (in $)": 193157822,
    "World Sales (in $)": 346864886,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Musical', 'Romance']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 32 min",
    "License": "PG"
  },
@@ -4727,7 +4727,7 @@
    "Domestic Sales (in $)": 151101803,
    "International Sales (in $)": 297805062,
    "World Sales (in $)": 448906865,
-   "Genre": "['Comedy', 'Drama', 'Music', 'Musical', 'Romance']",
+   "Genre": "['Comedy', 'Drama', 'Music', 'Music', 'Romance']",
    "Movie Runtime": "2 hr 8 min",
    "License": "PG-13"
  },
@@ -4857,7 +4857,7 @@
    "Domestic Sales (in $)": 148809770,
    "International Sales (in $)": 293489539,
    "World Sales (in $)": 442299309,
-   "Genre": "['Drama', 'Musical', 'Romance']",
+   "Genre": "['Drama', 'Music', 'Romance']",
    "Movie Runtime": "2 hr 38 min",
    "License": "PG-13"
  },
@@ -5143,7 +5143,7 @@
    "Domestic Sales (in $)": 144169664,
    "International Sales (in $)": 467088155,
    "World Sales (in $)": 611257819,
-   "Genre": "['Comedy', 'Musical', 'Romance']",
+   "Genre": "['Comedy', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 48 min",
    "License": "PG-13"
  },
@@ -5182,7 +5182,7 @@
    "Domestic Sales (in $)": 143619809,
    "International Sales (in $)": 340246709,
    "World Sales (in $)": 483866518,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Music', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Music', 'Music']",
    "Movie Runtime": "1 hr 36 min",
    "License": "PG"
  },
@@ -5286,7 +5286,7 @@
    "Domestic Sales (in $)": 141579773,
    "International Sales (in $)": 204500000,
    "World Sales (in $)": 346079773,
-   "Genre": "['Adventure', 'Animation', 'Drama', 'Family', 'Musical', 'Romance']",
+   "Genre": "['Adventure', 'Animation', 'Drama', 'Family', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 21 min",
    "License": "NA"
  },
@@ -5468,7 +5468,7 @@
    "Domestic Sales (in $)": 138797449,
    "International Sales (in $)": 288576868,
    "World Sales (in $)": 427374317,
-   "Genre": "['Biography', 'Drama', 'History']",
+   "Genre": "['History', 'Drama', 'History']",
    "Movie Runtime": "1 hr 58 min",
    "License": "R"
  },
@@ -5663,7 +5663,7 @@
    "Domestic Sales (in $)": 136025503,
    "International Sales (in $)": 96300000,
    "World Sales (in $)": 232325503,
-   "Genre": "['Biography', 'Drama', 'Thriller']",
+   "Genre": "['History', 'Drama', 'Thriller']",
    "Movie Runtime": "2 hr",
    "License": "R"
  },
@@ -5715,7 +5715,7 @@
    "Domestic Sales (in $)": 135026902,
    "International Sales (in $)": 67266000,
    "World Sales (in $)": 202292902,
-   "Genre": "['Biography', 'Comedy', 'Drama', 'Romance']",
+   "Genre": "['History', 'Comedy', 'Drama', 'Romance']",
    "Movie Runtime": "1 hr 55 min",
    "License": "PG-13"
  },
@@ -5884,7 +5884,7 @@
    "Domestic Sales (in $)": 133110742,
    "International Sales (in $)": 209584693,
    "World Sales (in $)": 342695435,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music', 'Music']",
    "Movie Runtime": "1 hr 27 min",
    "License": "G"
  },
@@ -6014,7 +6014,7 @@
    "Domestic Sales (in $)": 131538435,
    "International Sales (in $)": 367242682,
    "World Sales (in $)": 498781117,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Music', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Music', 'Music']",
    "Movie Runtime": "1 hr 41 min",
    "License": "G"
  },
@@ -6131,7 +6131,7 @@
    "Domestic Sales (in $)": 130164645,
    "International Sales (in $)": 139590785,
    "World Sales (in $)": 269755430,
-   "Genre": "['Biography', 'Crime', 'Drama']",
+   "Genre": "['History', 'Crime', 'Drama']",
    "Movie Runtime": "2 hr 37 min",
    "License": "R"
  },
@@ -6261,7 +6261,7 @@
    "Domestic Sales (in $)": 128002372,
    "International Sales (in $)": 84900000,
    "World Sales (in $)": 212902372,
-   "Genre": "['Adventure', 'Comedy', 'Drama', 'Fantasy', 'Musical']",
+   "Genre": "['Adventure', 'Comedy', 'Drama', 'Fantasy', 'Music']",
    "Movie Runtime": "2 hr 5 min",
    "License": "PG"
  },
@@ -6287,7 +6287,7 @@
    "Domestic Sales (in $)": 127807262,
    "International Sales (in $)": 212680574,
    "World Sales (in $)": 340487836,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Musical', 'Romance']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 47 min",
    "License": "PG"
  },
@@ -6534,7 +6534,7 @@
    "Domestic Sales (in $)": 125595205,
    "International Sales (in $)": 130676081,
    "World Sales (in $)": 256271286,
-   "Genre": "['Biography', 'Drama']",
+   "Genre": "['History', 'Drama']",
    "Movie Runtime": "2 hr 11 min",
    "License": "R"
  },
@@ -6612,7 +6612,7 @@
    "Domestic Sales (in $)": 125095601,
    "International Sales (in $)": 29707311,
    "World Sales (in $)": 154802912,
-   "Genre": "['Action', 'Biography', 'Drama', 'War']",
+   "Genre": "['Action', 'History', 'Drama', 'War']",
    "Movie Runtime": "2 hr 1 min",
    "License": "R"
  },
@@ -6625,7 +6625,7 @@
    "Domestic Sales (in $)": 125070033,
    "International Sales (in $)": 115727590,
    "World Sales (in $)": 240797623,
-   "Genre": "['Biography', 'Drama']",
+   "Genre": "['History', 'Drama']",
    "Movie Runtime": "1 hr 36 min",
    "License": "PG-13"
  },
@@ -6924,7 +6924,7 @@
    "Domestic Sales (in $)": 120634935,
    "International Sales (in $)": 281619449,
    "World Sales (in $)": 402254384,
-   "Genre": "['Comedy', 'Musical', 'Romance']",
+   "Genre": "['Comedy', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 54 min",
    "License": "PG-13"
  },
@@ -7041,7 +7041,7 @@
    "Domestic Sales (in $)": 119519402,
    "International Sales (in $)": 67278584,
    "World Sales (in $)": 186797986,
-   "Genre": "['Biography', 'Drama', 'Music', 'Romance']",
+   "Genre": "['History', 'Drama', 'Music', 'Romance']",
    "Movie Runtime": "2 hr 16 min",
    "License": "PG-13"
  },
@@ -7132,7 +7132,7 @@
    "Domestic Sales (in $)": 118871849,
    "International Sales (in $)": 84681462,
    "World Sales (in $)": 203553311,
-   "Genre": "['Comedy', 'Drama', 'Musical', 'Romance']",
+   "Genre": "['Comedy', 'Drama', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 57 min",
    "License": "NA"
  },
@@ -7223,7 +7223,7 @@
    "Domestic Sales (in $)": 117624357,
    "International Sales (in $)": 107883853,
    "World Sales (in $)": 225508210,
-   "Genre": "['Action', 'Biography', 'Drama', 'Sport']",
+   "Genre": "['Action', 'History', 'Drama', 'Sport']",
    "Movie Runtime": "2 hr 32 min",
    "License": "PG-13"
  },
@@ -7340,7 +7340,7 @@
    "Domestic Sales (in $)": 116900694,
    "International Sales (in $)": 275100000,
    "World Sales (in $)": 392000694,
-   "Genre": "['Biography', 'Comedy', 'Crime', 'Drama']",
+   "Genre": "['History', 'Comedy', 'Crime', 'Drama']",
    "Movie Runtime": "3 hr",
    "License": "R"
  },
@@ -7379,7 +7379,7 @@
    "Domestic Sales (in $)": 116632095,
    "International Sales (in $)": 60681700,
    "World Sales (in $)": 177313795,
-   "Genre": "['Biography', 'Drama']",
+   "Genre": "['History', 'Drama']",
    "Movie Runtime": "2 hr 12 min",
    "License": "PG-13"
  },
@@ -7444,7 +7444,7 @@
    "Domestic Sales (in $)": 115719751,
    "International Sales (in $)": 21051932,
    "World Sales (in $)": 136771683,
-   "Genre": "['Biography', 'Drama', 'Sport']",
+   "Genre": "['History', 'Drama', 'Sport']",
    "Movie Runtime": "1 hr 53 min",
    "License": "PG"
  },
@@ -7483,7 +7483,7 @@
    "Domestic Sales (in $)": 115637895,
    "International Sales (in $)": 45821402,
    "World Sales (in $)": 161459297,
-   "Genre": "['Action', 'Biography', 'Drama', 'Sport', 'War']",
+   "Genre": "['Action', 'History', 'Drama', 'Sport', 'War']",
    "Movie Runtime": "2 hr 17 min",
    "License": "PG-13"
  },
@@ -7860,7 +7860,7 @@
    "Domestic Sales (in $)": 110540715,
    "International Sales (in $)": 82129000,
    "World Sales (in $)": 192669715,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Music', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Music', 'Music']",
    "Movie Runtime": "1 hr 50 min",
    "License": "NA"
  },
@@ -8276,7 +8276,7 @@
    "Domestic Sales (in $)": 107100855,
    "International Sales (in $)": 111690956,
    "World Sales (in $)": 218791811,
-   "Genre": "['Action', 'Biography', 'Crime', 'Drama', 'Thriller']",
+   "Genre": "['Action', 'History', 'Crime', 'Drama', 'Thriller']",
    "Movie Runtime": "2 hr 14 min",
    "License": "PG-13"
  },
@@ -8536,7 +8536,7 @@
    "Domestic Sales (in $)": 104400899,
    "International Sales (in $)": 162644866,
    "World Sales (in $)": 267045765,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Musical', 'Romance']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 37 min",
    "License": "NA"
  },
@@ -8653,7 +8653,7 @@
    "Domestic Sales (in $)": 103365956,
    "International Sales (in $)": 52064379,
    "World Sales (in $)": 155430335,
-   "Genre": "['Drama', 'Music', 'Musical']",
+   "Genre": "['Drama', 'Music', 'Music']",
    "Movie Runtime": "2 hr 10 min",
    "License": "NA"
  },
@@ -8744,7 +8744,7 @@
    "Domestic Sales (in $)": 102610330,
    "International Sales (in $)": 111109612,
    "World Sales (in $)": 213719942,
-   "Genre": "['Biography', 'Drama']",
+   "Genre": "['History', 'Drama']",
    "Movie Runtime": "2 hr 50 min",
    "License": "PG-13"
  },
@@ -8991,7 +8991,7 @@
    "Domestic Sales (in $)": 101413188,
    "International Sales (in $)": 117200000,
    "World Sales (in $)": 218613188,
-   "Genre": "['Adventure', 'Animation', 'Drama', 'Family', 'Fantasy', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Drama', 'Family', 'Fantasy', 'Music']",
    "Movie Runtime": "1 hr 39 min",
    "License": "PG"
  },
@@ -9238,7 +9238,7 @@
    "Domestic Sales (in $)": 100494675,
    "International Sales (in $)": 40400000,
    "World Sales (in $)": 140894675,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Drama', 'Family', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Drama', 'Family', 'Music']",
    "Movie Runtime": "1 hr 19 min",
    "License": "NA"
  },
@@ -9407,7 +9407,7 @@
    "Domestic Sales (in $)": 100138851,
    "International Sales (in $)": 225200000,
    "World Sales (in $)": 325338851,
-   "Genre": "['Animation', 'Drama', 'Family', 'Musical', 'Romance']",
+   "Genre": "['Animation', 'Drama', 'Family', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 31 min",
    "License": "NA"
  },
@@ -9485,7 +9485,7 @@
    "Domestic Sales (in $)": 99112101,
    "International Sales (in $)": 153600000,
    "World Sales (in $)": 252712101,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Musical', 'Romance']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 33 min",
    "License": "NA"
  },
@@ -9589,7 +9589,7 @@
    "Domestic Sales (in $)": 97104620,
    "International Sales (in $)": 117000000,
    "World Sales (in $)": 214104620,
-   "Genre": "['Action', 'Biography', 'Crime', 'Drama', 'History']",
+   "Genre": "['Action', 'History', 'Crime', 'Drama', 'History']",
    "Movie Runtime": "2 hr 20 min",
    "License": "R"
  },
@@ -9602,7 +9602,7 @@
    "Domestic Sales (in $)": 96962694,
    "International Sales (in $)": 127957681,
    "World Sales (in $)": 224920375,
-   "Genre": "['Biography', 'Drama']",
+   "Genre": "['History', 'Drama']",
    "Movie Runtime": "2 hr",
    "License": "PG-13"
  },
@@ -9615,7 +9615,7 @@
    "Domestic Sales (in $)": 96898818,
    "International Sales (in $)": 225262427,
    "World Sales (in $)": 322161245,
-   "Genre": "['Biography', 'Drama', 'History']",
+   "Genre": "['History', 'Drama', 'History']",
    "Movie Runtime": "3 hr 15 min",
    "License": "R"
  },
@@ -9680,7 +9680,7 @@
    "Domestic Sales (in $)": 96368160,
    "International Sales (in $)": 98952240,
    "World Sales (in $)": 195320400,
-   "Genre": "['Biography', 'Drama', 'Musical']",
+   "Genre": "['History', 'Drama', 'Music']",
    "Movie Runtime": "2 hr 1 min",
    "License": "R"
  },
@@ -9771,7 +9771,7 @@
    "Domestic Sales (in $)": 95020213,
    "International Sales (in $)": 2450488,
    "World Sales (in $)": 97470701,
-   "Genre": "['Biography', 'Drama', 'Sport']",
+   "Genre": "['History', 'Drama', 'Sport']",
    "Movie Runtime": "2 hr 8 min",
    "License": "PG-13"
  },
@@ -9849,7 +9849,7 @@
    "Domestic Sales (in $)": 94125426,
    "International Sales (in $)": 35415096,
    "World Sales (in $)": 129540522,
-   "Genre": "['Biography', 'Drama', 'Romance']",
+   "Genre": "['History', 'Drama', 'Romance']",
    "Movie Runtime": "2 hr 3 min",
    "License": "PG-13"
  },
@@ -9927,7 +9927,7 @@
    "Domestic Sales (in $)": 93617009,
    "International Sales (in $)": 35573860,
    "World Sales (in $)": 129190869,
-   "Genre": "['Action', 'Biography', 'Drama', 'Sport']",
+   "Genre": "['Action', 'History', 'Drama', 'Sport']",
    "Movie Runtime": "1 hr 56 min",
    "License": "R"
  },
@@ -10057,7 +10057,7 @@
    "Domestic Sales (in $)": 92661715,
    "International Sales (in $)": 123560300,
    "World Sales (in $)": 216222015,
-   "Genre": "['Animation', 'Comedy', 'Drama', 'Family', 'Fantasy', 'Musical']",
+   "Genre": "['Animation', 'Comedy', 'Drama', 'Family', 'Fantasy', 'Music']",
    "Movie Runtime": "1 hr 42 min",
    "License": "NA"
  },
@@ -10187,7 +10187,7 @@
    "Domestic Sales (in $)": 91443253,
    "International Sales (in $)": 10539459,
    "World Sales (in $)": 101982712,
-   "Genre": "['Biography', 'Drama', 'Family']",
+   "Genre": "['History', 'Drama', 'Family']",
    "Movie Runtime": "1 hr 39 min",
    "License": "PG"
  },
@@ -10252,7 +10252,7 @@
    "Domestic Sales (in $)": 91125683,
    "International Sales (in $)": 142430025,
    "World Sales (in $)": 233555708,
-   "Genre": "['Biography', 'Drama', 'Thriller', 'War']",
+   "Genre": "['History', 'Drama', 'Thriller', 'War']",
    "Movie Runtime": "1 hr 54 min",
    "License": "NA"
  },
@@ -10356,7 +10356,7 @@
    "Domestic Sales (in $)": 90559416,
    "International Sales (in $)": 162349761,
    "World Sales (in $)": 252909177,
-   "Genre": "['Comedy', 'Drama', 'Family', 'Music', 'Musical', 'Romance']",
+   "Genre": "['Comedy', 'Drama', 'Family', 'Music', 'Music', 'Romance']",
    "Movie Runtime": "1 hr 52 min",
    "License": "G"
  },
@@ -10616,7 +10616,7 @@
    "Domestic Sales (in $)": 88631237,
    "International Sales (in $)": 76553000,
    "World Sales (in $)": 165184237,
-   "Genre": "['Adventure', 'Comedy', 'Family', 'Musical']",
+   "Genre": "['Adventure', 'Comedy', 'Family', 'Music']",
    "Movie Runtime": "2 hr",
    "License": "PG"
  },
@@ -10863,7 +10863,7 @@
    "Domestic Sales (in $)": 85911262,
    "International Sales (in $)": 50942244,
    "World Sales (in $)": 136853506,
-   "Genre": "['Comedy', 'Drama', 'Family', 'Musical']",
+   "Genre": "['Comedy', 'Drama', 'Family', 'Music']",
    "Movie Runtime": "1 hr 58 min",
    "License": "PG"
  },
@@ -10876,7 +10876,7 @@
    "Domestic Sales (in $)": 85886987,
    "International Sales (in $)": 148911649,
    "World Sales (in $)": 234798636,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Music', 'Music']",
    "Movie Runtime": "1 hr 32 min",
    "License": "NA"
  },
@@ -11032,7 +11032,7 @@
    "Domestic Sales (in $)": 85080171,
    "International Sales (in $)": 236672485,
    "World Sales (in $)": 321752656,
-   "Genre": "['Biography', 'Comedy', 'Drama', 'Music']",
+   "Genre": "['History', 'Comedy', 'Drama', 'Music']",
    "Movie Runtime": "2 hr 10 min",
    "License": "PG-13"
  },
@@ -11058,7 +11058,7 @@
    "Domestic Sales (in $)": 84919401,
    "International Sales (in $)": 94600000,
    "World Sales (in $)": 179519401,
-   "Genre": "['Biography', 'Drama']",
+   "Genre": "['History', 'Drama']",
    "Movie Runtime": "1 hr 39 min",
    "License": "NA"
  },
@@ -11331,7 +11331,7 @@
    "Domestic Sales (in $)": 83482352,
    "International Sales (in $)": 2604529,
    "World Sales (in $)": 86086881,
-   "Genre": "['Biography', 'Drama', 'Family', 'Music']",
+   "Genre": "['History', 'Drama', 'Family', 'Music']",
    "Movie Runtime": "1 hr 50 min",
    "License": "PG"
  },
@@ -11370,7 +11370,7 @@
    "Domestic Sales (in $)": 83301580,
    "International Sales (in $)": 34566404,
    "World Sales (in $)": 117867984,
-   "Genre": "['Biography', 'Comedy', 'Drama']",
+   "Genre": "['History', 'Comedy', 'Drama']",
    "Movie Runtime": "2 hr 5 min",
    "License": "PG-13"
  },
@@ -11383,7 +11383,7 @@
    "Domestic Sales (in $)": 83240103,
    "International Sales (in $)": 130800000,
    "World Sales (in $)": 214040103,
-   "Genre": "['Adventure', 'Animation', 'Comedy', 'Drama', 'Family', 'Fantasy', 'Musical']",
+   "Genre": "['Adventure', 'Animation', 'Comedy', 'Drama', 'Family', 'Fantasy', 'Music']",
    "Movie Runtime": "1 hr 36 min",
    "License": "NA"
  },
@@ -11864,7 +11864,7 @@
    "Domestic Sales (in $)": 80574010,
    "International Sales (in $)": 124020006,
    "World Sales (in $)": 204594016,
-   "Genre": "['Biography', 'Drama', 'Romance']",
+   "Genre": "['History', 'Drama', 'Romance']",
    "Movie Runtime": "2 hr 13 min",
    "License": "PG-13"
  },

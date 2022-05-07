@@ -7,37 +7,120 @@ import {
   getMoviesForGenre
 } from './loadMovies.js'
 
-const studioImages = {
-  '20th Century Studios': '/assets/img/studios/20thCenturyStudios.png',
-  'Artisan Entertainment': '/assets/img/studios/ArtisanEntertainment.png',
-  'Columbia Pictures': '/assets/img/studios/ColumbiaPictures.png',
-  'Dimension Films': '/assets/img/studios/DimensionFilms.png',
-  'DreamWorks': '/assets/img/studios/DreamWorks.png',
-  'FilmDistrict': '/assets/img/studios/FilmDistrict.png',
-  'Focus Features': '/assets/img/studios/FocusFeatures.png',
-  'Fox Searchlight Pictures': '/assets/img/studios/FoxSearchlightPictures.png',
-  'IFC Films': '/assets/img/studios/IFCFilms.png',
-  'Lionsgate': '/assets/img/studios/Lionsgate.png',
-  'Metro-Goldwin-Mayer (MGM)': '/assets/img/studios/Metro-Goldwin-Mayer(MGM).png',
-  'Miramax': '/assets/img/studios/Miramax.png',
-  'NewLine Cinema': '/assets/img/studios/NewLineCinema.png',
-  'Newmarket Films': '/assets/img/studios/NewmarketFilms.png',
-  'Orion Pictures': '/assets/img/studios/OrionPictures.png',
-  'Paramount Pictures': '/assets/img/studios/ParamountPictures.png',
-  'Relativity Media': '/assets/img/studios/RelativityMedia.png',
-  'Revolution Studios': '/assets/img/studios/RevolutionStudios.png',
-  'Roadside Attractions': '/assets/img/studios/RoadsideAttractions.png',
-  'Screen Gems': '/assets/img/studios/ScreenGems.png',
-  'Sony Pictures Entertainment (SPE)': '/assets/img/studios/SonyPicturesEntertainment(SPE).png',
-  'STX Entertainment': '/assets/img/studios/STXEntertainment.png',
-  'Summit Entertainment': '/assets/img/studios/SummitEntertainment.png',
-  'The Weinstein Company': '/assets/img/studios/TheWeinsteinCompany.png',
-  'TriStar Pictures': '/assets/img/studios/TriStarPictures.png',
-  'United Artists': '/assets/img/studios/UnitedArtists.png',
-  'Universal Pictures': '/assets/img/studios/UniversalPictures.png',
-  'Walt Disney Studios Motion Pictures': '/assets/img/studios/WaltDisneyStudiosMotionPictures.png',
-  'Warner Bros': '/assets/img/studios/WarnerBros.png'
-}
+const studioImages = [
+  {
+    studio: '20thCenturyStudios',
+    img: '/img/studios/20thCenturyStudios.png'
+  },
+  {
+    studio: 'ArtisanEntertainment',
+    img: '/img/studios/ArtisanEntertainment.png'
+  },
+  {
+    studio: 'ColumbiaPictures',
+    img: '/img/studios/ColumbiaPictures.png'
+  },
+  {
+    studio: 'DimensionFilms',
+    img: '/img/studios/DimensionFilms.png'
+  },
+  {
+    studio: 'DreamWorks',
+    img: '/img/studios/DreamWorks.png'
+  },
+  {
+    studio:'FilmDistrict',
+    img: '/img/studios/FilmDistrict.png'
+  },
+  {
+    studio: 'FocusFeatures',
+    img: '/img/studios/FocusFeatures.png'
+  },
+  {
+    studio: 'FoxSearchlightPictures',
+    img: '/img/studios/FoxSearchlightPictures.png'
+  },
+  {
+    studio: 'IFCFilms',
+    img: '/img/studios/IFCFilms.png'
+  },
+  {
+    studio: 'Lionsgate',
+    img: '/img/studios/Lionsgate.png'
+  },
+  {
+    studio: 'Metro-Goldwyn-Mayer(MGM)',
+    img: '/img/studios/Metro-Goldwyn-Mayer(MGM).png'
+  },
+  {
+    studio: 'Miramax',
+    img: '/img/studios/Miramax.png'
+  },
+  {
+    studio: 'NewLineCinema',
+    img: '/img/studios/NewLineCinema.png'
+  },
+  {
+    studio: 'NewMarketFilms',
+    img: '/img/studios/NewMarketFilms.png'
+  },
+  {
+    studio: 'OrionPictures',
+    img: '/img/studios/OrionPictures.png'
+  },
+  {
+    studio: 'ParamountPictures',
+    img: '/img/studios/ParamountPictures.png'
+  },
+  {
+    studio: 'RelativityMedia',
+    img: '/img/studios/RelativityMedia.png'
+  },
+  {
+    studio: 'RoadsideAttractions',
+    img: '/img/studios/RoadsideAttractions.png'
+  },
+  {
+    studio: 'ScreenGems',
+    img: '/img/studios/ScreenGems.png'
+  }, 
+  {
+    studio: 'SonyPicturesEntertainment(SPE)',
+    img: '/img/studios/SonyPicturesEntertainment(SPE).png'
+  },
+  {
+    studio: 'STXEntertainment',
+    img: '/img/studios/STXEntertainment.png'
+  },
+  {
+    studio: 'SummitEntertainment',
+    img: '/img/studios/SummitEntertainment.png'
+  },
+  {
+    studio: 'TheWeinsteinCompany',
+    img: '/img/studios/TheWeinsteinCompany.png'
+  },
+  {
+    studio: 'TriStarPictures',
+    img: '/img/studios/TriStarPictures.png'
+  },
+  {
+    studio: 'UnitedArtists',
+    img: '/img/studios/UnitedArtists.png'
+  },
+  {
+    studio: 'UniversalPictures',
+    img: '/img/studios/UniversalPictures.png'
+  },
+  {
+    studio: 'WaltDisneyStudiosMotionPictures',
+    img: '/img/studios/WaltDisneyStudiosMotionPictures.png'
+  },
+  {
+    studio: 'WarnerBros',
+    img: '/img/studios/WarnerBros.png'
+  }
+]
 const inflationDictionary = {
   '1970': 6.21,
   '1972': 5.75,
@@ -654,8 +737,9 @@ export async function getGraph(year = false, inflation = false, movieGenre = nul
   }
    else {
     const movies = getMoviesForYear(year, movieGenre);
-    console.log(movies)
+    // console.log(movies)
     const yearsDistributors = getDistributorsForYear(year);
+    // console.log(yearsDistributors) 
     let x;
     if (yearsDistributors.length == 1) {
       x = d3.scaleLinear()
@@ -667,8 +751,15 @@ export async function getGraph(year = false, inflation = false, movieGenre = nul
         .range([10, width])
     }
     svgGraph.append('g')
+    .attr('class', 'x-axis')
       .attr("transform", "translate(5," + height + ")")
       .call(d3.axisTop(x).ticks(yearsDistributors.length - 1).tickSize(10)).selectAll("text")
+    const ticks = svgGraph.select('.x-axis').selectAll(".tick").data(studioImages).append('svg:image').attr('xlink:href', function (d, i) {
+      const studio = yearsDistributors[i].replaceAll(' ', '');
+      console.log(studio)
+      const studioIndex  = studioImages.findIndex(studioObject =>{return studioObject.studio == studio});
+      return studioImages[studioIndex].img;
+    }).attr('width', 45).attr('height', 45).attr('x', -22)
     
     if (inflation) {
       svgGraph.append('g')
