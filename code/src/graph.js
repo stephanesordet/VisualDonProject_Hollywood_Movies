@@ -7,6 +7,7 @@ import {
   getMoviesForGenre
 } from './loadMovies.js'
 
+
 const studioImages = [
   {
     studio: '20thCenturyStudios',
@@ -125,6 +126,7 @@ const studioImages = [
     img: '/img/studios/WarnerBros.png'
   }
 ]
+/* Creating a dictionary with the key being the year and the value being the inflation rate compared to 2022. */
 const inflationDictionary = {
   '1970': 6.21,
   '1972': 5.75,
@@ -200,7 +202,7 @@ export async function getGraph(year = false, inflation = false, movieGenre = nul
       left: 100
     },
     width = window.innerWidth * 0.7 - margin.left - margin.right,
-    height = window.innerHeight * 0.9 - margin.top - margin.bottom;
+    height = window.innerHeight * 0.86 - margin.top - margin.bottom;
 
   svgGraph.attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -483,7 +485,6 @@ export async function getGraph(year = false, inflation = false, movieGenre = nul
   
   if (year == false && movieGenre == null) {
     let movies = getMoviesForGenre(movieGenre)
-    console.log(movies)
     const x = d3.scaleLinear()
       .domain([1970, 2021])
       .range([10, width])

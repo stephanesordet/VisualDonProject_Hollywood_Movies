@@ -14,6 +14,7 @@ const sliderDiv = document.getElementById('my_slider');
 const rangeValue = document.getElementById('range-value');
 const yearsCheckbox = document.getElementById('AllYears');
 const inflationCheckbox = document.getElementById('Inflation');
+const xLegend = document.querySelectorAll('p.legend:nth-child(2)');
 
 yearsCheckbox.checked = true;
 inflationCheckbox.checked = false;
@@ -41,7 +42,6 @@ inflationCheckbox.addEventListener('input', () => {
 yearsCheckbox.addEventListener('input', () => {
     if (yearsCheckbox.checked) {
         if (inflationCheckbox.checked) {
-            console.log(42);
             rangeValue.innerHTML = "";
             slider.value = uniqueYears.length-1;
             getGraph(false, true);
@@ -50,6 +50,7 @@ yearsCheckbox.addEventListener('input', () => {
             slider.value = uniqueYears.length-1;
             getGraph(false, false);
         }
+       
     } else {
         if (inflationCheckbox.checked) {
             rangeValue.innerHTML = uniqueYears[0]
@@ -60,6 +61,7 @@ yearsCheckbox.addEventListener('input', () => {
             slider.value = 0;
             getGraph(uniqueYears[0], false);
         }
+        
     }
 })
 

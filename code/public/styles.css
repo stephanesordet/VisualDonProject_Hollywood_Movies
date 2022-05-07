@@ -24,7 +24,23 @@ div.title-details {
     display: none;
 }
 
+p.legend{
+    font-size: 12px;
+    font-weight: lighter;
+}
 
+/* p.x-legend{
+    position: absolute;
+    bottom: -6px;
+    left: 35%;
+} */
+
+p.y-legend{
+    position: absolute;
+    bottom:50%;
+    left: -50px;
+    transform: rotate(-90deg);
+}
 
 div.tooltip {
     position: absolute;

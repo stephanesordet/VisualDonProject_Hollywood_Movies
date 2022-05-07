@@ -33,13 +33,7 @@ function getMovies() {
   return Movies
 }
 
-// export async function getMovieByTitle(title){
-//   title = title.replaceAll('-', ' ');
-//   const movies = getMovies()
-//   const movie = movies.find(movie => movie.Title === title)
-//   return movie
-// }
-
+/* Rendering the movies in the DOM */
 async function renderMovies(movies) {
   for (const movie of movies) {
     const movieTitle = movie.Title.slice(0, movie.Title.length - 7)
@@ -48,6 +42,11 @@ async function renderMovies(movies) {
   }
 }
 
+/**
+ * It takes a movie object and renders the movie details in the DOM
+ * @param [event=false] - the event that triggered the function
+ * @param movie - the movie object that was clicked on
+ */
 export async function renderMovieDetails(event=false, movie){
 
   const newMovieDetail = TEMPLATE_MOVIE_DETAIL.content.cloneNode(true)
@@ -81,6 +80,12 @@ export async function renderMovieDetails(event=false, movie){
   movieDetail.classList.remove('hidden');
 }
 
+/**
+ * We're taking the template we created in the HTML, cloning it, and then adding the movie poster and
+ * title to it
+ * @param movieTitle - The title of the movie
+ * @param moviePoster - the URL of the movie poster
+ */
 function renderMovie(movieTitle, moviePoster) {
   const newMovie = movieListItemTemplate.content.cloneNode(true)
   newMovie.querySelector('img').setAttribute('src', POSTER_BASE_URL + moviePoster)
@@ -150,6 +155,9 @@ export function getWorldSales() {
   return WorldSalesArray
 }
 
+/**
+ * It takes the world sales data, inflates it to today's dollars, and returns the result.
+ */
 export function getInflatedWorldSales(){
   const inflationDictionary = {
     '1970': 6.21,
@@ -252,6 +260,10 @@ export function getYears(){
   return [...new Set(YearsArray)];
 }
 
+/**
+ * It returns a list of distributors for a given year.
+ * @param year - The year you want to get the distributors for.
+ */
 export function getDistributorsForYear(year) {
   const DistributorsArray = [];
   const Movies = getMovies()
@@ -263,7 +275,14 @@ export function getDistributorsForYear(year) {
   return [...new Set(DistributorsArray)]
 }
 
-export function getMoviesForYear(year, movieGenre) {
+/**
+ * This function takes in a year and a movie genre and returns a list of movies that were released in
+ * that year and match the genre.
+ * @param year - The year you want to get movies for.
+ * @param [movieGenre=false] - This is the genre of the movie. If you want to get movies of a
+ * particular genre, you can pass the genre as a parameter.
+ */
+export function getMoviesForYear(year, movieGenre=false) {
   const Movies = getMovies()
   const MoviesArray = [];
   Movies.map((Movies, i) => {
@@ -280,6 +299,10 @@ export function getMoviesForYear(year, movieGenre) {
   return MoviesArray
 }
 
+/**
+ * It takes a movie genre as an argument and returns a list of movies that match that genre.
+ * @param movieGenre - The genre of the movie you want to search for.
+ */
 export function getMoviesForGenre(movieGenre) {
   const Movies = getMovies()
   const MoviesArray = [];
