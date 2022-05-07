@@ -742,18 +742,23 @@ export async function getGraph(year = false, inflation = false, movieGenre = nul
     // console.log(yearsDistributors) 
     let x;
     if (yearsDistributors.length == 1) {
+      console.log(42)
       x = d3.scaleLinear()
-        .domain([0, 1])
+        .domain([-1, 1])
         .range([10, width])
-    }else {
+      svgGraph.append('g')
+        .attr('class', 'x-axis')
+        .attr("transform", "translate(5," + height + ")")
+        .call(d3.axisTop(x).ticks(1).tickSize(10)).selectAll("text")
+    } else {
       x = d3.scaleLinear()
         .domain([0, yearsDistributors.length - 1])
         .range([10, width])
+      svgGraph.append('g')
+        .attr('class', 'x-axis')
+        .attr("transform", "translate(5," + height + ")")
+        .call(d3.axisTop(x).ticks(yearsDistributors.length - 1).tickSize(10)).selectAll("text")
     }
-    svgGraph.append('g')
-    .attr('class', 'x-axis')
-      .attr("transform", "translate(5," + height + ")")
-      .call(d3.axisTop(x).ticks(yearsDistributors.length - 1).tickSize(10)).selectAll("text")
     const ticks = svgGraph.select('.x-axis').selectAll(".tick").data(studioImages).append('svg:image').attr('xlink:href', function (d, i) {
       const studio = yearsDistributors[i].replaceAll(' ', '');
       console.log(studio)
