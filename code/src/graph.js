@@ -61,7 +61,7 @@ const studioImages = [
     img: '/img/studios/NewLineCinema.png'
   },
   {
-    studio: 'NewMarketFilms',
+    studio: 'NewmarketFilms',
     img: '/img/studios/NewMarketFilms.png'
   },
   {
@@ -75,6 +75,10 @@ const studioImages = [
   {
     studio: 'RelativityMedia',
     img: '/img/studios/RelativityMedia.png'
+  },
+  {
+    studio: 'RevolutionStudios',
+    img: '/img/studios/RevolutionStudios.png'
   },
   {
     studio: 'RoadsideAttractions',
@@ -759,12 +763,17 @@ export async function getGraph(year = false, inflation = false, movieGenre = nul
         .attr("transform", "translate(5," + height + ")")
         .call(d3.axisTop(x).ticks(yearsDistributors.length - 1).tickSize(10)).selectAll("text")
     }
+    const text = svgGraph.select('.x-axis').selectAll('.tick').selectAll('text').attr('style', 'display: none');
+
     const ticks = svgGraph.select('.x-axis').selectAll(".tick").data(studioImages).append('svg:image').attr('xlink:href', function (d, i) {
       const studio = yearsDistributors[i].replaceAll(' ', '');
       console.log(studio)
       const studioIndex  = studioImages.findIndex(studioObject =>{return studioObject.studio == studio});
+      console.log(studioImages[studioIndex])
       return studioImages[studioIndex].img;
     }).attr('width', 45).attr('height', 45).attr('x', -22).attr('y', 5)
+
+    
     
     if (inflation) {
       svgGraph.append('g')
