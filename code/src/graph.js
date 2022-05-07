@@ -759,7 +759,7 @@ export async function getGraph(year = false, inflation = false, movieGenre = nul
       console.log(studio)
       const studioIndex  = studioImages.findIndex(studioObject =>{return studioObject.studio == studio});
       return studioImages[studioIndex].img;
-    }).attr('width', 45).attr('height', 45).attr('x', -22)
+    }).attr('width', 45).attr('height', 45).attr('x', -22).attr('y', 5)
     
     if (inflation) {
       svgGraph.append('g')
