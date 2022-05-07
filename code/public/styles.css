@@ -188,6 +188,13 @@ div.block>*{
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
+  border: 1px solid black;
+    border-radius: 3px;
+}
+
+#closeDetails:hover {
+    background-color: rgb(180, 168, 168);
+    color: black;
 }
 
 input[type="range"] {
@@ -273,6 +280,11 @@ button.Western {
 }
 
 #colorsLegend button:hover {
-    background-color: white;
+    background-color: rgb(180, 168, 168);
+    color: black;
+}
+
+#colorsLegend button.active {
+    background-color: rgb(255, 255, 255);
     color: black;
 }

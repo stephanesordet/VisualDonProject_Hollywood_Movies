@@ -109,20 +109,46 @@ export function readScroll(deltaY) {
 
 document.querySelectorAll('#colorsLegend button').forEach(genre => {
     genre.addEventListener('click', () => {
-        if (inflationCheckbox.checked) {
-            if (yearsCheckbox.checked) {
-                getGraph(false, true, genre.innerHTML);
+        if(genre.classList.contains('active')) {
+            genre.classList.remove('active');
+
+            if (inflationCheckbox.checked) {
+                if (yearsCheckbox.checked) {
+                    getGraph(false, true);
+                } else {
+                    console.log(42)
+                    rangeValue.innerHTML = uniqueYears[slider.value]
+                    getGraph(uniqueYears[slider.value], true);
+                }
             } else {
-                console.log(42)
-                rangeValue.innerHTML = uniqueYears[slider.value]
-                getGraph(uniqueYears[slider.value], true, genre.innerHTML);
+                if (yearsCheckbox.checked) {
+                    getGraph(false, false);
+                } else {
+                    rangeValue.innerHTML = uniqueYears[slider.value]
+                    getGraph(uniqueYears[slider.value], false);
+                }
             }
-        } else {
-            if (yearsCheckbox.checked) {
-                getGraph(false, false, genre.innerHTML);
+        }
+        else {
+            document.querySelectorAll('#colorsLegend button').forEach(genre => {
+                genre.classList.remove('active');
+            })
+            genre.classList.add('active');
+            if (inflationCheckbox.checked) {
+                if (yearsCheckbox.checked) {
+                    getGraph(false, true, genre.innerHTML);
+                } else {
+                    console.log(42)
+                    rangeValue.innerHTML = uniqueYears[slider.value]
+                    getGraph(uniqueYears[slider.value], true, genre.innerHTML);
+                }
             } else {
-                rangeValue.innerHTML = uniqueYears[slider.value]
-                getGraph(uniqueYears[slider.value], false, genre.innerHTML);
+                if (yearsCheckbox.checked) {
+                    getGraph(false, false, genre.innerHTML);
+                } else {
+                    rangeValue.innerHTML = uniqueYears[slider.value]
+                    getGraph(uniqueYears[slider.value], false, genre.innerHTML);
+                }
             }
         }
     })
