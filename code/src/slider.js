@@ -14,7 +14,6 @@ const sliderDiv = document.getElementById('my_slider');
 const rangeValue = document.getElementById('range-value');
 const yearsCheckbox = document.getElementById('AllYears');
 const inflationCheckbox = document.getElementById('Inflation');
-const xLegend = document.querySelectorAll('p.legend:nth-child(2)');
 
 yearsCheckbox.checked = true;
 inflationCheckbox.checked = false;
@@ -23,16 +22,19 @@ const uniqueYears = getYears()
 inflationCheckbox.addEventListener('input', () => {
     if (inflationCheckbox.checked) {
         if (yearsCheckbox.checked) {
+            removeGenre();
             getGraph(false, true);
         } else {
-            console.log(42)
+            removeGenre();
             rangeValue.innerHTML = uniqueYears[slider.value]
             getGraph(uniqueYears[slider.value], true);
         }
     } else {
         if (yearsCheckbox.checked) {
+            removeGenre();
             getGraph(false, false);
         } else {
+            removeGenre();
             rangeValue.innerHTML = uniqueYears[slider.value]
             getGraph(uniqueYears[slider.value], false);
         }
@@ -42,10 +44,12 @@ inflationCheckbox.addEventListener('input', () => {
 yearsCheckbox.addEventListener('input', () => {
     if (yearsCheckbox.checked) {
         if (inflationCheckbox.checked) {
+            removeGenre();
             rangeValue.innerHTML = "";
             slider.value = uniqueYears.length-1;
             getGraph(false, true);
         } else {
+            removeGenre();
             rangeValue.innerHTML = ""
             slider.value = uniqueYears.length-1;
             getGraph(false, false);
@@ -53,10 +57,12 @@ yearsCheckbox.addEventListener('input', () => {
        
     } else {
         if (inflationCheckbox.checked) {
+            removeGenre();
             rangeValue.innerHTML = uniqueYears[0]
             slider.value = 0;
             getGraph(uniqueYears[0], true);
         } else {
+            removeGenre();
             rangeValue.innerHTML = uniqueYears[0]
             slider.value = 0;
             getGraph(uniqueYears[0], false);
@@ -72,8 +78,10 @@ export function getSlider() {
         rangeValue.innerHTML = uniqueYears[slider.value]
         yearsCheckbox.checked = false;
         if (inflationCheckbox.checked) {
+            removeGenre();
             getGraph(uniqueYears[slider.value], true);
         } else {
+            removeGenre();
             getGraph(uniqueYears[slider.value]);
         }
     })
@@ -103,6 +111,7 @@ export function readScroll(deltaY) {
     document.querySelectorAll('.tooltip').forEach(tooltip => {
         tooltip.style.display = 'none';
     })
+    removeGenre()
     rangeValue.innerHTML = uniqueYears[slider.value]
     yearsCheckbox.checked = false;
     getGraph(uniqueYears[slider.value]);
@@ -118,7 +127,6 @@ document.querySelectorAll('#colorsLegend button').forEach(genre => {
                 if (yearsCheckbox.checked) {
                     getGraph(false, true);
                 } else {
-                    console.log(42)
                     rangeValue.innerHTML = uniqueYears[slider.value]
                     getGraph(uniqueYears[slider.value], true);
                 }
@@ -140,7 +148,6 @@ document.querySelectorAll('#colorsLegend button').forEach(genre => {
                 if (yearsCheckbox.checked) {
                     getGraph(false, true, genre.innerHTML);
                 } else {
-                    console.log(42)
                     rangeValue.innerHTML = uniqueYears[slider.value]
                     getGraph(uniqueYears[slider.value], true, genre.innerHTML);
                 }
@@ -155,3 +162,9 @@ document.querySelectorAll('#colorsLegend button').forEach(genre => {
         }
     })
   })
+
+  function removeGenre() {
+    document.querySelectorAll('#colorsLegend button').forEach(genre => {
+        genre.classList.remove('active');
+    })
+}

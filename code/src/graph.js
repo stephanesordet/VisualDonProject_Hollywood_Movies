@@ -226,7 +226,6 @@ export async function getGraph(year = false, inflation = false, movieGenre = nul
 
   if (year == false && movieGenre != null) {
     let movies = getMoviesForGenre(movieGenre)
-    console.log(movies)
     const x = d3.scaleLinear()
       .domain([1970, 2021])
       .range([10, width])
@@ -742,12 +741,9 @@ export async function getGraph(year = false, inflation = false, movieGenre = nul
   }
    else {
     const movies = getMoviesForYear(year, movieGenre);
-    // console.log(movies)
     const yearsDistributors = getDistributorsForYear(year);
-    // console.log(yearsDistributors) 
     let x;
     if (yearsDistributors.length == 1) {
-      console.log(42)
       x = d3.scaleLinear()
         .domain([-1, 1])
         .range([10, width])
@@ -768,9 +764,7 @@ export async function getGraph(year = false, inflation = false, movieGenre = nul
 
     const ticks = svgGraph.select('.x-axis').selectAll(".tick").data(studioImages).append('svg:image').attr('xlink:href', function (d, i) {
       const studio = yearsDistributors[i].replaceAll(' ', '');
-      console.log(studio)
       const studioIndex  = studioImages.findIndex(studioObject =>{return studioObject.studio == studio});
-      console.log(studioImages[studioIndex])
       return studioImages[studioIndex].img;
     }).attr('width', 45).attr('height', 45).attr('x', -22).attr('y', 5)
 
