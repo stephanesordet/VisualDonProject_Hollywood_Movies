@@ -28,5 +28,9 @@ const RuntimeArray = []
 const inflatedArray = getInflatedWorldSales();
 
 window.addEventListener('wheel', (e) => {
+    const detailsOn = document.getElementById('movieDetails').classList.contains('hidden')
+    console.log(detailsOn)
+    if (detailsOn) {
     readScroll(e.deltaY);
+    }
 });

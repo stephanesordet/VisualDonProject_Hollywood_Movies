@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hollywood Movies</title>
+    <script src="../src/index.js" async></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <p class="legend y-legend">Box Office in Millions of USD</p>
+    <div class="title-details">
+        <h1 class="main-title">Top 915 Hollywood Movies from 1970 to 2021 (ranked by Box Office)</h1>
+        <div id="movieDetails" class="hidden">
+        </div>
+    </div>
+    
+    <div class="dataviz">
+    <div class="graph">        
+    </div>
+    <div id="my_slider">
+        <div class="checkbox">
+            <input type="checkbox" name="All Years" id="AllYears">
+            <label for="AllYears">All Years</label>
+            <input type="checkbox" name="Inflation" id = "Inflation">
+            <label for="Inflation">Adjust to inflation</label>
+        </div>
+        <input id="slider" orient="vertical" type="range" step="1" min="" max="">
+        <span id="range-value"></span>
+    </div>
+    <div id="colorsLegend">
+        <button class="Action">Action</button>
+        <button class="Adventure">Adventure</button>
+        <button class="Animation">Animation</button>
+        <button class="Comedy">Comedy</button>
+        <button class="Crime">Crime</button>
+        <button class="Documentary">Documentary</button>
+        <button class="Drama">Drama</button>
+        <button class="Family">Family</button>
+        <button class="History">History</button>
+        <button class="Horror">Horror</button>
+        <button class="Music">Music</button>
+        <button class="Mystery">Mystery</button>
+        <button class="Romance">Romance</button>
+        <button class="Sci-Fi">Sci-Fi</button>
+        <button class="Sport">Sport</button>
+        <button class="Thriller">Thriller</button>
+        <button class="War">War</button>
+        <button class="Western">Western</button>
+    </div>
+    <template id="movieDetailTemplate">
+        <img class="poster" height="300" src="">
+        <div class="detailsContent">
+        <h2 class="title"></h2>
+        <h3>Description</h3>
+        <p class="description"></p>
+        <h3>Genre(s)</h3>
+        <div class="genre"></div>
+        <div class="block">
+            <div>
+                <h3>Studio</h3>
+                <p class="studio"></p>
+            </div>
+            <div>
+                <h3>Runtime</h3>
+                <p class="runtime"></p>
+            </div>
+        </div>
+        <div class="block">
+            <div class="world">
+                <h3>World Sales (USD)</h3>
+                <p class="WorldSales"></p>
+            </div>
+            <div class="domestic">
+                <h3>Domestic Sales (USD)</h3>
+                <p class="DomesticSales"></p>
+            </div>
+        </div>
+    </div>
+        <div class=".button">
+            <button id="closeDetails">Close</button>
+        </div>
+    </template>
+</div>
+</body>
+
+</html>
