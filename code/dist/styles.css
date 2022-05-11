@@ -21,69 +21,8 @@ div.title-details {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
-
-/* MODAL */
-.welcome-modal {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 60%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .welcome-modal-content {
-    border-radius: 10px;
-    background: #FFFFFF;
-    box-shadow: 1px 1px 20px 0.5px #555;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: auto;
-    padding-left: auto;
-    padding-right: auto;
-  }
-
-  .modal-header {
-    padding: 15px;
-    display: flex;
-  }
-
-  .welcome-modal-header {
-    position: relative;
-    border-bottom: 1px solid #eeeeee;
-    color: #B3494C;
-    justify-content: space-between;
-  }
-
-  .welcome-modal-body {
-    position: relative;
-    padding: 20px 10px;
-  }
-
-  .close-modal {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: none;
-    font-size: 20px;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #B3494C;
-    background: transparent;
-  }
-
-  /* END MODAL */
-
 
 p.legend{
     font-size: 12px;
@@ -118,6 +57,9 @@ div.graph {
     width: 70%;
     padding-left: 2%;
 }
+
+/****************************************************************
+MOVIE DETAILS */
 div.movieDetails {
   max-width: 25%;
 }
@@ -215,33 +157,12 @@ p.Western {
 div.block{
     display: flex;
     justify-content: space-between;
-    
 }
 
 div.block>*{
     margin: 20px;
 }
 
-#my_slider{
-    position: absolute;
-    height: 100%;
-    margin: 0;
-    margin-left: 70%;
-    padding: 0;
-    overflow: hidden;
-    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-#slider{
-    margin-top:10%;
-    height: 80%;
-    vertical-align: middle;
-}
-
-.checkbox{
-    margin-top: 2%;
-}
-
-/* align button#closeDetails to the middle of the .button div */
 #closeDetails {
     position: relative;
     top: 60%;
@@ -266,6 +187,26 @@ div.block>*{
 #closeDetails:hover {
     background-color: rgb(180, 168, 168);
     color: black;
+}
+/*********************************************************************************
+ FILTERING */
+#my_slider{
+    position: absolute;
+    height: 100%;
+    margin: 0;
+    margin-left: 70%;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#slider{
+    margin-top:10%;
+    height: 80%;
+    vertical-align: middle;
+}
+
+.checkbox{
+    margin-top: 2%;
 }
 
 input[type="range"] {
@@ -360,6 +301,9 @@ button.Western {
     color: black;
 }
 
+/*********************************************************************************
+13" ADAPTATION */
+
 @media screen and (max-width: 1500px) {
     #colorsLegend {
         position: relative;
@@ -380,6 +324,7 @@ button.Western {
         color: white;
         margin: 4%;
         transition-duration: 0.4s;
+        cursor: pointer;
     }
 
     .main-title{
@@ -473,3 +418,78 @@ button.Western {
     }
     
 }
+
+
+/********************************************************************************* 
+MODAL */
+.welcome-modal, .references-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome-modal-content, .references-modal-content {
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 20px 0.5px #555;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: auto;
+    padding-left: auto;
+    padding-right: auto;
+  }
+
+  .welcome-modal-header, .references-modal-header {
+    position: relative;
+    border-bottom: 1px solid #eeeeee;
+    color: #B3494C;
+    justify-content: space-between;
+    padding: 0 5% ;
+  }
+
+  .welcome-modal-body, .references-modal-body {
+    position: relative;
+    padding: 2% 5%;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .close-modal, .close-references {
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #B3494C;
+    background: transparent;
+  }
+
+  #references-btn {
+    position: absolute;
+    bottom: 2% ;
+    right: 2%;
+  }
+
+  #references-btn button:hover {
+    cursor: pointer;
+    color: darkgray;
+  }
+
+  #references-btn button {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    text-decoration: underline;
+    color: gray;
+  }

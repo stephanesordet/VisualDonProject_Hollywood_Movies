@@ -6,7 +6,7 @@ d3.select('body').append('div').attr('id', 'my_dataviz');
 
 getGraph()
 getSlider()
-toggleModal()
+toggleModal('welcome')
 
 
 window.addEventListener('hashchange', () => {
@@ -36,13 +36,22 @@ window.addEventListener('wheel', (e) => {
     }
 });
 
-document.querySelector('.close-modal').addEventListener('click', ()=>{
-    console.log('test')
-    toggleModal()
+document.getElementById('references-btn').addEventListener('click', () => {
+    toggleModal('references')
 })
 
-function toggleModal() {
-    console.log(42)
-    const modal = document.querySelector('.welcome-modal');
-    modal.classList.toggle('hidden');
+document.querySelector('.close-modal').addEventListener('click', () => {
+    toggleModal('welcome')
+})
+
+document.querySelector('.close-references').addEventListener('click', () => {
+    toggleModal('references')
+})
+
+function toggleModal(modalName) {
+    if (modalName == 'welcome') {
+        document.querySelector('.welcome-modal').classList.toggle('hidden');
+    } else {
+        document.querySelector('.references-modal').classList.toggle('hidden');
+    }
 }
