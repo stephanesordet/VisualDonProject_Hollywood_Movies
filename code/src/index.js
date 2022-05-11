@@ -6,6 +6,7 @@ d3.select('body').append('div').attr('id', 'my_dataviz');
 
 getGraph()
 getSlider()
+toggleModal()
 
 
 window.addEventListener('hashchange', () => {
@@ -28,8 +29,20 @@ const RuntimeArray = []
 const inflatedArray = getInflatedWorldSales();
 
 window.addEventListener('wheel', (e) => {
-    const detailsOn = document.getElementById('movieDetails').classList.contains('hidden')
-    if (detailsOn) {
+    const detailsOff = document.getElementById('movieDetails').classList.contains('hidden')
+    const welcomeOff = document.querySelector('.welcome-modal').classList.contains('hidden')
+    if (detailsOff && welcomeOff) {
     readScroll(e.deltaY);
     }
 });
+
+document.querySelector('.close-modal').addEventListener('click', ()=>{
+    console.log('test')
+    toggleModal()
+})
+
+function toggleModal() {
+    console.log(42)
+    const modal = document.querySelector('.welcome-modal');
+    modal.classList.toggle('hidden');
+}

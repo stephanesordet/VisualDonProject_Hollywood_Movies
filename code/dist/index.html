@@ -6,6 +6,7 @@
     <title>Hollywood Movies</title>
     <script src="../src/index.js" async></script>
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -83,6 +84,23 @@
         </div>
     </template>
 </div>
-<script defer src="index_bundle.js"></script></body>
+<div class="welcome-modal hidden">
+    <div class="welcome-modal-content">
+        <div class="welcome-modal-header">
+            <button class="close-modal"><span class="material-icons">close</span></button>
+            <h2>Welcome to Hollywood Movies</h2>
+        </div>
+        <div class="welcome-modal-body">
+            <p>In this data visualization you can explore the top grossing 915 Hollywood movies between 1970 and 2021</p>
+            <p>Once you close this modal, you'll be able to view the data in a few different ways.</p>
+            <p>The starter screen displays all the movies over the years. While the Y-axis always represents the Box Office in millions of dollars, the X-axis might change. On the "All Years" screen it represents the years.</p>
+            <p>While remaining on the "All Years" screen, you can filter the movies by genre by clicking on one of the buttons on the right.</p>
+            <p>Initially the Box Office is not adjusted to inflation but you can do so by clicking the corresponding checkbox at the top right of the screen.</p>
+            <p>Finally you can view the movies by year by either scrolling or moving the vertical slider on the right. On this view, the X-axis represents the distributors responsible for the movie release.</p>
+            <p>Enjoy!</p>
+        </div>
+    </div>
+</div>
+</body>
 
 </html>
