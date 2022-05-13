@@ -23,3 +23,5 @@ Ces données ont été exploitées sur divers sites web. Dans les exemples ci-de
 - [Wikipédia](https://fr.wikipedia.org/wiki/Liste_des_plus_gros_succ%C3%A8s_du_box-office_mondial)
 ## Wireframe 
 Le wireframe de notre projet est disponible sur [Figma](https://www.figma.com/file/R0rvrCyjQwNPUYi2ByNpxs/Hollywood?node-id=0%3A1).
+## Démo du projet
+Une démo du projet et disponible sur [ce site](https://hollywood.jules-sandoz.com).
